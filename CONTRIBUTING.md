@@ -1,2 +1,5 @@
-Test 1
-Test 2
+Monika - Frontend
+Ole Christian - Backend
+Sander - Fullstack
+Erling - Frontend
+Rafi - Frontend + Design
