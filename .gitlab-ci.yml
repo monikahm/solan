@@ -2,7 +2,7 @@ image: python:3.6.2
 
 test:
   script:
-  - cd backend
+  - cd Solan
   - pip install -r requirements.txt
   - python manage.py makemigrations
   - python manage.py migrate
