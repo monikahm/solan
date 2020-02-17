@@ -119,4 +119,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# Directories
+api/photos
+
 # End of https://www.gitignore.io/api/django
