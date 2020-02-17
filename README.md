@@ -12,37 +12,6 @@ Run npm start
 
 ### Prerequisites
 
-```
 
-### Installing
-
-
-
-## Running the tests
-
-
-
-## Deployment
-
-
-## Built With
-
-
-
-## Contributing
-
-Please read [CONTRIBUTING.md]
-
-## Versioning
-
-
-## Authors
-
-
-
-## License
-
-
-## Acknowledgments
 
 
