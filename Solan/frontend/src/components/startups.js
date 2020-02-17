@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function User() {
+function FetchStartups() {
     const [startups, setStartup] = useState([]);
 
     async function fetchStartups() {
@@ -24,4 +24,4 @@ function User() {
     )
 }
 
-export default User;
+export default FetchStartups;

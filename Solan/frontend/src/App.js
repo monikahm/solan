@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import User from './components/user';
+import FetchStartups from './components/startups';
 
 function App() {
   return (
     <div className="App">
-      <User></User>
+      <FetchStartups></FetchStartups>
     </div>
   );
 }
