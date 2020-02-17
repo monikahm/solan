@@ -7,6 +7,8 @@ from.views.user_create import CreateUserView
 from .views.profile import ProfileView
 from .views.council_position import CouncilPositionView
 from .views.blogposts import BlogPostsView
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 router = routers.DefaultRouter()
@@ -20,4 +22,4 @@ urlpatterns = [
     path('api/login', LoginView.as_view()),
     path('api/logout', LogoutView.as_view()),
     path('api/register', CreateUserView.as_view())
-    ]
+    ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
