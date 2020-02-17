@@ -6,12 +6,14 @@ from .views.logout import LogoutView
 from.views.user_create import CreateUserView
 from .views.profile import ProfileView
 from .views.council_position import CouncilPositionView
+from .views.blogposts import BlogPostsView
 
 
 router = routers.DefaultRouter()
 router.register('api/startups', StartupsView, 'startups')
 router.register('api/profile', ProfileView, 'profile')
 router.register('api/councilposition', CouncilPositionView, 'council_position')
+router.register('api/blogposts', BlogPostsView, 'blogposts')
 
 urlpatterns = [
     path('', include(router.urls)),
