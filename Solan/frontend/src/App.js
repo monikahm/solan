@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Toolbar from "./components/toolbar.js"
+import FetchStartups from './components/startups/startups';
 
 
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
 
-      <Toolbar />
+      <FetchStartups></FetchStartups>
 
     </div>
   );
