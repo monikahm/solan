@@ -1,19 +1,11 @@
 import React, { useState, useEffect } from "react";
-import startups from './startups.css'
+import startups from './startups.css';
+import useFetch from "../api";
 
 function FetchStartups() {
-    const [startups, setStartup] = useState([]);
 
-    async function fetchStartups() {
-        const res = await fetch("http://127.0.0.1:8000/api/startups/");
-        const data = await res.json()
-        setStartup(data)
-    }
-
-    useEffect(() => {
-        fetchStartups();
-    }, []);
-
+    const [startups, setStartups] = useState([])
+    useFetch("http://127.0.0.1:8000/api/startups/", setStartups)
 
     return (
         <div className="startups">
