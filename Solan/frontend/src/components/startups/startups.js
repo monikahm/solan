@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import startups from './startups.css';
+import React, { useState } from "react";
+import './startups.css';
 import useFetch from "../api";
 
 function FetchStartups() {
@@ -9,6 +9,7 @@ function FetchStartups() {
 
     return (
         <div className="startups">
+            <h1>Startups</h1>
             {startups.map((s, index) => (
                 <div>
                     <img src={s.photo}></img>
