@@ -15,8 +15,10 @@ let Home = () => (
 const App = () => {
   return (
     <div className="App">
-      <h1>Home</h1>
-      <nav>
+
+
+
+        <nav className="Navbar">
         <Link to="/">Home</Link> | {" "}
         <Link to="startups">Startups</Link> | {" "}
         <Link to="blogs">Blog</Link> | {" "}

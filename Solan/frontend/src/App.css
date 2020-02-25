@@ -3,6 +3,15 @@
   color: black;
 }
 
+.Navbar{
+  height: 100px;
+  padding: 1px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 25px;
+}
+
 
 
 
