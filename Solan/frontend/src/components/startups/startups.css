@@ -4,12 +4,11 @@
 
 }
 
-
 .Header {
-    height: 200px;
-    padding: 1px;
+    padding: 10px;
+    height: 170px;
     text-align: center;
-    background: #1abc9c;
+    background: #ffcfab;
     color: white;
     font-size: 55px;
 }
@@ -17,10 +16,7 @@
 
 .contents{
     padding:10px;
-    background-color: beige;
     position: absolute;
-    top: 300px;
-    bottom: 0;
     left: 0;
     right: 0;
     width: auto;
@@ -43,3 +39,5 @@
     height: 100px;
     width: 160px;
 }
+
+
