@@ -40,8 +40,10 @@ const App = () => {
         <CouncilList path="council">Council</CouncilList>
       </Router>
 
-
     </div>
+
+
+
   );
 }
 export default App;

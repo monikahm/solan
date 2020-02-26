@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './startups.css';
 import useFetch from "../api";
-
+import picture from "../../assets/images/bruce-bannerbilde.png"
 
 
 function FetchStartups() {
@@ -15,12 +15,17 @@ function FetchStartups() {
         <div className="body">
 
             <div className="Header">
-                <p>Header</p>
+                <img src={picture}  alt= "bannerpicture" className="banner-pic"/>
+
             </div>
+
             <div className="contents">{
+
+
 
                 startups.map((s, index) => (
                     <div className="Card">
+
 
                         <img className="startupImage"
                              src={s.photo}></img>
@@ -31,14 +36,16 @@ function FetchStartups() {
                         <div className="startupinfo">
                             {s.info} </div>
 
-                        <div className="Cardbutton">
-                            <button>Read More</button>
-                        </div>
+                            <button className="readmorebtn">Read More</button>
+
 
                     </div>
                 ))}
             </div>
+
+
         </div>
+
     )
 
 
