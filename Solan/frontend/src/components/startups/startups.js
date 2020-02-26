@@ -1,41 +1,33 @@
-import React, { useState, useEffect } from "react";
-import startups from './startups.css'
+import React, { useState } from 'react'
+import './startups.css'
+import useFetch from '../api'
 
 function FetchStartups() {
-    const [startups, setStartup] = useState([]);
+  const [startups, setStartups] = useState([])
+  useFetch('http://127.0.0.1:8000/api/startups/', setStartups)
 
-    async function fetchStartups() {
-        const res = await fetch("http://127.0.0.1:8000/api/startups/");
-        const data = await res.json()
-        setStartup(data)
-    }
+  return (
+    <div className="body">
+      <div className="Header">
+        <p>Header</p>
+      </div>
+      <div className="contents">
+        {startups.map((s, index) => (
+          <div className="Card" key={index + s}>
+            <img className="startupImage" src={s.photo}></img>
 
-    useEffect(() => {
-        fetchStartups();
-    }, []);
+            <div className="startupname">{s.name} </div>
 
+            <div className="startupinfo">{s.info} </div>
 
-    return (
-        <div className="startups">
-            {startups.map((s, index) => (
-                <div>
-                    <img src={s.photo}></img>
-                    <ul key={index}>
-                        <li key={index}>
-                            <a href={index}>
-                                {s.name}
-                            </a>
-                        </li>
-                        <li key={index}>
-                            <a href={index}>
-                                {s.info}
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            ))}
-        </div>
-    )
+            <div className="Cardbutton">
+              <button>Read More</button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
 }
 
-export default FetchStartups;
+export default FetchStartups

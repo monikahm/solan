@@ -29,15 +29,21 @@ python3 manage.py migrate
 python3 manage.py runserver
 ```
 
-To run frontend go to frontend folder and install either yarn or npm with command
+To run frontend go to frontend folder and install either yarn
 ```
 yarn
-or 
-npm install
+
 ```
 To start frontend 
 ```
 yarn start
-or  
-npm start 
 ``` 
+### Linting
+Before committing run:
+```
+yarn lint
+```
+To fix issues run:
+```
+yarn lint --fix
+```
