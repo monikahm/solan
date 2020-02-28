@@ -4,4 +4,5 @@
 env/
 venv/
 ENV/
-.vscode
+
+.idea
