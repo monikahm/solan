@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './startups.css'
 import useFetch from '../api'
 import picture from '../../assets/images/bruce-bannerbilde.png'
@@ -15,8 +15,8 @@ function FetchStartups() {
 
       <div className="contents">
         {startups.map((s, index) => (
-          <div className="Card">
-            <img className="startupImage" src={s.photo}></img>
+          <div className="Card" key={index + s}>
+            <img className="startupImage" src={s.photo} alt={s.photo}></img>
 
             <div className="startupname">{s.name} </div>
 

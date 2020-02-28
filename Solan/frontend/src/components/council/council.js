@@ -9,7 +9,7 @@ function CouncilList() {
     <div>
       {council.map((s) => (
         <>
-          <img src={s.photo}></img>
+          <img src={s.photo} alt={s.photo}></img>
           <div>{s.name}</div>
           <div>{s.info}</div>
           <div>{s.position}</div>
