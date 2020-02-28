@@ -8,6 +8,7 @@ from .views.profile import ProfileView
 from .views.council_position import CouncilPositionView
 from .views.blogpost import BlogPostView
 from .views.partner import PartnerView
+from .views.info import InfoView
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -18,6 +19,7 @@ router.register('api/profile', ProfileView, 'profile')
 router.register('api/councilposition', CouncilPositionView, 'council_position')
 router.register('api/blogposts', BlogPostView, 'blogposts')
 router.register('api/partners', PartnerView, 'partners')
+router.register('api/info', InfoView, 'info')
 
 urlpatterns = [
     path('', include(router.urls)),
