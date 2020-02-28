@@ -4,15 +4,29 @@
 
 }
 
-.Header {
-    padding: 10px;
-    height: 170px;
+.banner-pic {
     text-align: center;
     background: #ffcfab;
-    color: white;
-    font-size: 55px;
+    padding-top: 1px;
+    font-size: 100px;
+    cursor: pointer;
+    width: 100%;
 }
 
+
+
+
+.readmorebtn{
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding:20px;
+    border: none;
+    color: black;
+    border-radius: 30px;
+    background-color: #EEEEEE;
+
+}
 
 .contents{
     padding:10px;
@@ -27,17 +41,18 @@
 .Card{
     display: inline-block;
     background-color: seashell;
-    height: 250px;
-    width: 175px;
+    height: 450px;
+    width: 325px;
     border-radius: 22px;
-    font-size: 10px;
+    font-size: 15px;
     margin-right: 30px;
 
 }
 
 .startupImage{
-    height: 100px;
-    width: 160px;
+    height: 200px;
+    width: 300px;
+    padding-bottom: 50px;
 }
 
 

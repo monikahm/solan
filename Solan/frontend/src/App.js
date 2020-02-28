@@ -35,7 +35,16 @@ const App = () => {
         <Partners path="partners">Partners</Partners>
         <CouncilList path="council">Council</CouncilList>
       </Router>
+<<<<<<< HEAD
+
+    </div>
+
+
+
+  );
+=======
     </div>
   )
+>>>>>>> e2be99cad6c773532efd12aeff46316fc4daa5f9
 }
 export default App
