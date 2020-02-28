@@ -17,10 +17,10 @@ const App = () => {
         </a>
 
         <div className="Nav_Links">
-          <Link to="/">Home</Link>
+          <Link to="/">Hjem</Link>
           <Link to="startups">Startups</Link>
-          <Link to="blogs">Blog</Link>
-          <Link to="council">Council</Link>
+          <Link to="blogs">Blogg</Link>
+          <Link to="council">Styret</Link>
         </div>
       </nav>
 
@@ -35,16 +35,8 @@ const App = () => {
         <Partners path="partners">Partners</Partners>
         <CouncilList path="council">Council</CouncilList>
       </Router>
-<<<<<<< HEAD
-
-    </div>
-
-
-
-  );
-=======
     </div>
   )
->>>>>>> e2be99cad6c773532efd12aeff46316fc4daa5f9
 }
+
 export default App
