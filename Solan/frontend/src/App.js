@@ -6,6 +6,7 @@ import { Router, Link } from '@reach/router'
 import Partners from './components/partners/partners'
 import CouncilList from './components/council/council'
 import AboutSolan from './components/about/about'
+import KontaktOss from './components/kontaktoss/kontakt-oss'
 
 let Home = () => <div></div>
 
@@ -28,6 +29,7 @@ const App = () => {
 
       <nav className="Navbar_footer">
         <Link to="partners">Partners</Link>
+        <Link to="kontakt">Kontakt oss</Link>
       </nav>
 
       <Router>
@@ -37,6 +39,7 @@ const App = () => {
         <BlogPosts path="blogs">Blog</BlogPosts>
         <Partners path="partners">Partners</Partners>
         <CouncilList path="council">Council</CouncilList>
+        <KontaktOss path="kontakt">Kontakt oss</KontaktOss>
       </Router>
     </div>
   )

@@ -9,7 +9,7 @@ function AboutSolan() {
   return (
     <div>
       {about.map((s) => (
-        <div>{s.info}</div>
+        <div key={s.id}>{s.info}</div>
       ))}
     </div>
   )
