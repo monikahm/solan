@@ -5,6 +5,7 @@ import BlogPosts from './components/blogposts/blogposts'
 import { Router, Link } from '@reach/router'
 import Partners from './components/partners/partners'
 import CouncilList from './components/council/council'
+import AboutSolan from './components/about/about'
 
 let Home = () => <div></div>
 
@@ -18,6 +19,7 @@ const App = () => {
 
         <div className="Nav_Links">
           <Link to="/">Hjem</Link>
+          <Link to="about">Om oss</Link>
           <Link to="startups">Startups</Link>
           <Link to="blogs">Blogg</Link>
           <Link to="council">Styret</Link>
@@ -30,6 +32,7 @@ const App = () => {
 
       <Router>
         <Home path="/" />
+        <AboutSolan path="about">About</AboutSolan>
         <FetchStartups path="startups">Startups</FetchStartups>
         <BlogPosts path="blogs">Blog</BlogPosts>
         <Partners path="partners">Partners</Partners>
@@ -38,5 +41,4 @@ const App = () => {
     </div>
   )
 }
-
 export default App
