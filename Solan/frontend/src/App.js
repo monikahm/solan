@@ -13,7 +13,7 @@ const App = () => {
     <div className="App">
       <nav className="Navbar">
         <a href="#default" className="logo">
-          Solan Linjeforening
+          NTNU School of Entrepreneurship
         </a>
 
         <div className="Nav_Links">
