@@ -5,6 +5,7 @@ from .models.council_position import CouncilPosition
 from .models.blogpost import BlogPost
 from .models.partner import Partner
 from .models.info import Info
+from .models.quote import Quote
 from django.forms import TextInput, Textarea
 from django.db import models
 
@@ -22,3 +23,4 @@ admin.site.register(CouncilPosition, YourModelAdmin)
 admin.site.register(BlogPost, YourModelAdmin)
 admin.site.register(Partner, YourModelAdmin)
 admin.site.register(Info, YourModelAdmin)
+admin.site.register(Quote, YourModelAdmin)
