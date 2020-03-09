@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import useFetch from '../api'
 import './council.css'
-import picture from "../../assets/images/bruce-bannerbilde.png";
+
 
 function CouncilList() {
   const [council, setCouncil] = useState([])
@@ -12,9 +12,6 @@ function CouncilList() {
       <div class="council_grid-container">
 
 
-      <div class="council_header">
-        <img src={picture} alt="bannerpicture" className="council_banner-pic"/>
-      </div>
 
 
       {council.map((s) => (

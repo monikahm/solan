@@ -1,0 +1,85 @@
+.home-grid{
+    display: grid;
+    grid-template-areas:
+    'boxtop'
+    'boxmiddle'
+    'boxbottom';
+}
+
+
+.frontpage_banner{
+    padding-top: 2vw;
+    width: 80vw;
+}
+
+
+.boxtop{
+    font-size: 1.4vw;
+    color: #ffcfab;
+    grid-area: boxtop;
+    padding: 3vw;
+    text-align: left;
+    padding-top:12vw;
+    height: 28vw;
+    background-color:#3A3E70;
+    border-radius: 45vw/5vw;
+}
+
+
+
+.boxtop_left{
+    margin-left: 15vw;
+    margin-bottom: 5vw;
+}
+
+.boxtop_right{
+
+}
+
+.boxtop_bottom{
+    height: 10vw;
+    width: 100%;
+}
+
+
+
+.boxmiddle{
+    font-size: 2vw;
+    grid-area: boxmiddle;
+    height: 50vw;
+    width: 100%;
+    background-color:#FAF6F3;
+}
+
+.boxbottom{
+    grid-area: boxbottom;
+    padding-bottom: 40vw;
+    background-color:#FAF6F3;
+    margin-top: 0.2vw;
+
+}
+
+.boxbottomright{
+    position: absolute;
+    margin-left: 40%;
+    height:30vw;
+    width: 50%;
+
+}
+
+.boxbottomleft{
+    position: absolute;
+    height:30vw;
+    width: 50%;
+
+}
+
+.FAQButton{
+    color: #A6A6C2;
+    border: none;
+    font-size: 1vw;
+    border-radius: 0.3vw;
+    background-color: #FFFFFF;
+    height: 3vw;
+    cursor: pointer;
+}
