@@ -15,7 +15,7 @@ async function LoginAPI(url, username, password) {
 }
 
 function logout() {
-    localStorage.removeItem('user');
+    localStorage.clear();
 }
 
-export default LoginAPI
+export { LoginAPI, logout }
