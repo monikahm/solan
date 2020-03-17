@@ -1,8 +1,13 @@
 import React, { useState } from 'react'
+
+import { useDispatch, useSelector } from 'react-redux'
+
 import './login.css'
 import { LoginAPI, logout } from '../../services/loginservices'
 
 export default function Login() {
+  const alert = useSelector((state) => state.alert)
+  const dispatch = useDispatch()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [isLogged, setIsLogged] = useState(false)

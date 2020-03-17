@@ -1,11 +1,8 @@
 import React, { useEffect } from 'react'
 import './App.css'
-
-import { history } from './helpers/history';
-import { useDispatch, useSelector } from 'react-redux';
-
+import { Provider } from 'react-redux'
 import { alertActions } from './actions/alertActions'
-
+import { store } from './helpers/store'
 import FetchStartups from './components/startups/startups'
 import BlogPosts from './components/blogposts/blogposts'
 import { Router, Link } from '@reach/router'
@@ -18,15 +15,6 @@ import Login from './components/login/login'
 let Home = () => <div></div>
 
 const App = () => {
-  const alert = useSelector(state => state.alert);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    history.listen((location, action) => {
-      dispatch(alertActions.clear());
-    })
-  }, []);
-
   return (
     <div className="App">
       <nav className="Navbar">
@@ -48,17 +36,18 @@ const App = () => {
         <Link to="partners">Partners</Link>
         <Link to="kontakt">Kontakt oss</Link>
       </nav>
-
-      <Router history={history}>
-        <Home path="/" />
-        <AboutSolan path="about">About</AboutSolan>
-        <FetchStartups path="startups">Startups</FetchStartups>
-        <BlogPosts path="blogs">Blog</BlogPosts>
-        <Partners path="partners">Partners</Partners>
-        <CouncilList path="council">Council</CouncilList>
-        <KontaktOss path="kontakt">Kontakt oss</KontaktOss>
-        <Login path="login">Login</Login>
-      </Router>
+      <Provider store={store}>
+        <Router>
+          <Home path="/" />
+          <AboutSolan path="about">About</AboutSolan>
+          <FetchStartups path="startups">Startups</FetchStartups>
+          <BlogPosts path="blogs">Blog</BlogPosts>
+          <Partners path="partners">Partners</Partners>
+          <CouncilList path="council">Council</CouncilList>
+          <KontaktOss path="kontakt">Kontakt oss</KontaktOss>
+          <Login path="login">Login</Login>
+        </Router>
+      </Provider>
     </div>
   )
 }

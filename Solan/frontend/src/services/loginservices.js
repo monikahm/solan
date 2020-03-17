@@ -8,8 +8,8 @@ async function LoginAPI(url, username, password) {
     })
   }
   return fetch(url, options).then((res) => {
-    localStorage.setItem('token', res.token)
-    return Promise.resolve(res)
+    localStorage.setItem('token', JSON.stringify(res.token))
+    return res
   })
 }
 
@@ -17,8 +17,8 @@ function logout() {
   localStorage.clear()
 }
 
-function getToken(){
-  return localStorage.getItem('token')
+function getToken() {
+  return JSON.parse(localStorage.getItem('token'))
 }
 
 export { LoginAPI, logout, getToken }
