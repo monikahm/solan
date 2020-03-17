@@ -17,4 +17,8 @@ function logout() {
   localStorage.clear()
 }
 
-export { LoginAPI, logout }
+function getToken(){
+  return localStorage.getItem('token')
+}
+
+export { LoginAPI, logout, getToken }

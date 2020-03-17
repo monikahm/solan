@@ -1,5 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './App.css'
+
+import { history } from './helpers/history';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { alertActions } from './actions/alertActions'
+
 import FetchStartups from './components/startups/startups'
 import BlogPosts from './components/blogposts/blogposts'
 import { Router, Link } from '@reach/router'
@@ -12,6 +18,15 @@ import Login from './components/login/login'
 let Home = () => <div></div>
 
 const App = () => {
+  const alert = useSelector(state => state.alert);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    history.listen((location, action) => {
+      dispatch(alertActions.clear());
+    })
+  }, []);
+
   return (
     <div className="App">
       <nav className="Navbar">
@@ -34,7 +49,7 @@ const App = () => {
         <Link to="kontakt">Kontakt oss</Link>
       </nav>
 
-      <Router>
+      <Router history={history}>
         <Home path="/" />
         <AboutSolan path="about">About</AboutSolan>
         <FetchStartups path="startups">Startups</FetchStartups>
