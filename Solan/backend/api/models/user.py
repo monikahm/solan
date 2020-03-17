@@ -8,7 +8,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
     first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
-    active = models.BooleanField(default=True)
+    member = models.BooleanField(default=False)
     staff = models.BooleanField(default=False)
     admin = models.BooleanField(default=False)
     superuser = models.BooleanField(default=False)
@@ -42,5 +42,5 @@ class User(AbstractBaseUser, PermissionsMixin):
         return self.admin
 
     @property
-    def is_active(self):
-        return self.active
+    def is_member(self):
+        return self.member
