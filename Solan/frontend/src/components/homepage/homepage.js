@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './homepage.css'
 import picture from "../../assets/images/bruce-bannerbilde.png"
 import picture2 from "../../assets/images/partnere.PNG"
+import InstagramEmbed from 'react-instagram-embed';
 
 function Homepage() {
 
@@ -11,59 +12,73 @@ function Homepage() {
         <div className="home-grid">
 
 
-        <div className="boxtop">
+            <div className="boxtop">
 
-            <div className="boxtop_left">
-                <h1>
-                    Solan<br />
-                    linjeforening ved<br />
-                    NTNUs<br />
-                    Entreprenørskole<br />
-                </h1>
+
+
+                <div className="boxtop_left">
+                    <h1>
+                        Solan<br />
+                        linjeforening ved<br />
+                        NTNUs<br />
+                        Entreprenørskole<br />
+                    </h1>
+
+                </div>
+
+                <div className="boxtop_right">
+
+
+
+                </div>
+                <div className="boxtop_bottom">
+                    <img src={picture2} alt="partnere" className="partnere" />
+                </div>
 
             </div>
 
-            <div className="boxtop_right">
+            <div className="boxmiddle">
+                <img src={picture} alt="frontpage_banner" className="frontpage_banner" />
 
-            </div>
-            <div className="boxtop_bottom">
-                <img src={picture2} alt="partnere" className="partnere" />
-            </div>
-
-        </div>
-
-        <div className="boxmiddle">
-            <img src={picture} alt="frontpage_banner" className="frontpage_banner" />
-
-            <p>Har du en god ide?</p>
-            <p>Ta kontakt og få all hjelp du trenger</p>
-        </div>
-
-
-        <div className="boxbottom">
-
-            <div className="boxbottomright">
-                <h1>Hvorfor gjør vi det?</h1>
-                <p>Vi jobber for å være et mangfoldig miljø og aktivitetsforbud, med muligheter for alle våre studenter, og et sted morgendagnens grundere vil være.</p>
-
-                <h1>Hvorfor gjør vi det?</h1>
-                <p>Vi jobber for å være et mangfoldig miljø og aktivitetsforbud, med muligheter for alle våre studenter, og et sted morgendagnens grundere vil være.</p>
-
-                <h1>Hvorfor gjør vi det?</h1>
-                <p>Vi jobber for å være et mangfoldig miljø og aktivitetsforbud, med muligheter for alle våre studenter, og et sted morgendagnens grundere vil være.</p>
+                <p>Har du en god ide?</p>
+                <p>Ta kontakt og få all hjelp du trenger</p>
             </div>
 
 
-            <div className= "boxbottomleft">
-                <h2>FAQ</h2>
-                <p>Spørsmål eller noe annet?</p>
+            <div className="boxbottom">
 
-                <button className="FAQButton">Kontakt oss</button>
+                <div className="boxbottomright">
+                    <h1>Hvorfor gjør vi det?</h1>
+                    <p>Vi jobber for å være et mangfoldig miljø og aktivitetsforbud, med muligheter for alle våre studenter, og et sted morgendagnens grundere vil være.</p>
+                    <p>VLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+                    <h1>FAQ</h1>
+                    <p>Spørsmål eller noe annet?</p>
+                        <button className="FAQButton">Kontakt oss</button>
+
+                </div>
+
+
+                <div className= "boxbottomleft">
+                    <div className="InstagramEmbed">
+                        <InstagramEmbed
+                            url='https://www.instagram.com/p/B9Y-EJTAxM-/'
+                            maxWidth={320} /* Minimum 320 */
+                            hideCaption={false}
+                            containerTagName='div'
+                            protocol=''
+                            injectScript
+                            onLoading={() => {}}
+                            onSuccess={() => {}}
+                            onAfterRender={() => {}}
+                            onFailure={() => {}}
+                        />
+                    </div>
+                </div>
+
+
+
             </div>
-
-
-
-        </div>
 
 
 
