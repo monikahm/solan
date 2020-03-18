@@ -1,5 +1,3 @@
-import { userConstants } from '../constants/user.constants'
-
 console.log(localStorage.getItem('token'))
 
 let user = null
@@ -8,7 +6,9 @@ try {
   if (token !== 'undefined') {
     user = token
   }
-} catch(ex) {}
+} catch (ex) {
+  console.log(ex)
+}
 
 const inistialState = { loggedIn: !!user, user }
 

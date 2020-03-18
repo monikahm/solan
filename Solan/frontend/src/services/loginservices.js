@@ -7,7 +7,7 @@ async function LoginAPI(url, username, password) {
       password
     })
   }
-  const result = await fetch(url, options).then(res => res.json())
+  const result = await fetch(url, options).then((res) => res.json())
   localStorage.setItem('token', result.token)
   return result.token
 }

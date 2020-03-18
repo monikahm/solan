@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './App.css'
-import { alertActions } from './actions/alertActions'
 import FetchStartups from './components/startups/startups'
 import BlogPosts from './components/blogposts/blogposts'
 import { Router, Link } from '@reach/router'
@@ -34,16 +33,16 @@ const App = () => {
         <Link to="partners">Partners</Link>
         <Link to="kontakt">Kontakt oss</Link>
       </nav>
-        <Router>
-          <Home path="/" />
-          <AboutSolan path="about">About</AboutSolan>
-          <FetchStartups path="startups">Startups</FetchStartups>
-          <BlogPosts path="blogs">Blog</BlogPosts>
-          <Partners path="partners">Partners</Partners>
-          <CouncilList path="council">Council</CouncilList>
-          <KontaktOss path="kontakt">Kontakt oss</KontaktOss>
-          <Login path="login">Login</Login>
-        </Router>
+      <Router>
+        <Home path="/" />
+        <AboutSolan path="about">About</AboutSolan>
+        <FetchStartups path="startups">Startups</FetchStartups>
+        <BlogPosts path="blogs">Blog</BlogPosts>
+        <Partners path="partners">Partners</Partners>
+        <CouncilList path="council">Council</CouncilList>
+        <KontaktOss path="kontakt">Kontakt oss</KontaktOss>
+        <Login path="login">Login</Login>
+      </Router>
     </div>
   )
 }
