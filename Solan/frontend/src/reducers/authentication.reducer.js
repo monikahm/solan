@@ -2,27 +2,24 @@ import { userConstants } from '../constants/user.constants'
 
 console.log(localStorage.getItem('token'))
 
-let user = localStorage.getItem('token')
-  ? JSON.parse(localStorage.getItem('token'))
-  : undefined
-const inistialState = user ? { loggedIn: true, user } : {}
+let user = null
+try {
+  const token = localStorage.getItem('token')
+  if (token !== 'undefined') {
+    user = token
+  }
+} catch(ex) {}
+
+const inistialState = { loggedIn: !!user, user }
 
 export function authentication(state = inistialState, action) {
   switch (action.type) {
-    case userConstants.LOGIN_REQUEST:
+    case 'setUser':
       return {
-        loggedIn: true,
+        ...state,
+        loggedIn: !!action.user,
         user: action.user
       }
-    case userConstants.LOGIN_SUCCESS:
-      return {
-        loggedIn: true,
-        user: action.user
-      }
-    case userConstants.LOGIN_FAILURE:
-      return {}
-    case userConstants.LOGOUT:
-      return {}
     default:
       return state
   }

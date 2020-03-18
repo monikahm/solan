@@ -7,10 +7,9 @@ async function LoginAPI(url, username, password) {
       password
     })
   }
-  return fetch(url, options).then((res) => {
-    localStorage.setItem('token', JSON.stringify(res.token))
-    return res
-  })
+  const result = await fetch(url, options).then(res => res.json())
+  localStorage.setItem('token', result.token)
+  return result.token
 }
 
 function logout() {
@@ -18,7 +17,12 @@ function logout() {
 }
 
 function getToken() {
-  return JSON.parse(localStorage.getItem('token'))
+  const token = localStorage.getItem('token')
+  if (token !== 'undefined') {
+    return token
+  } else {
+    return ''
+  }
 }
 
 export { LoginAPI, logout, getToken }

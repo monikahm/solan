@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react'
 import './App.css'
-import { Provider } from 'react-redux'
 import { alertActions } from './actions/alertActions'
-import { store } from './helpers/store'
 import FetchStartups from './components/startups/startups'
 import BlogPosts from './components/blogposts/blogposts'
 import { Router, Link } from '@reach/router'
@@ -36,7 +34,6 @@ const App = () => {
         <Link to="partners">Partners</Link>
         <Link to="kontakt">Kontakt oss</Link>
       </nav>
-      <Provider store={store}>
         <Router>
           <Home path="/" />
           <AboutSolan path="about">About</AboutSolan>
@@ -47,7 +44,6 @@ const App = () => {
           <KontaktOss path="kontakt">Kontakt oss</KontaktOss>
           <Login path="login">Login</Login>
         </Router>
-      </Provider>
     </div>
   )
 }
