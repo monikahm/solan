@@ -5,6 +5,7 @@
         "node": true
     },
     "extends": [
+        "react-app",
         "plugin:react/recommended",
         "eslint:recommended",
         "prettier",

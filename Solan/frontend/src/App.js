@@ -7,6 +7,7 @@ import Partners from './components/partners/partners'
 import CouncilList from './components/council/council'
 import AboutSolan from './components/about/about'
 import KontaktOss from './components/kontaktoss/kontakt-oss'
+import Login from './components/login/login'
 
 let Home = () => <div></div>
 
@@ -24,6 +25,7 @@ const App = () => {
           <Link to="startups">Startups</Link>
           <Link to="blogs">Blogg</Link>
           <Link to="council">Styret</Link>
+          <Link to="login">Login</Link>
         </div>
       </nav>
 
@@ -31,7 +33,6 @@ const App = () => {
         <Link to="partners">Partners</Link>
         <Link to="kontakt">Kontakt oss</Link>
       </nav>
-
       <Router>
         <Home path="/" />
         <AboutSolan path="about">About</AboutSolan>
@@ -40,6 +41,7 @@ const App = () => {
         <Partners path="partners">Partners</Partners>
         <CouncilList path="council">Council</CouncilList>
         <KontaktOss path="kontakt">Kontakt oss</KontaktOss>
+        <Login path="login">Login</Login>
       </Router>
     </div>
   )
