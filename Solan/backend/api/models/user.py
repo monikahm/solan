@@ -6,13 +6,14 @@ from django.contrib.auth.models import PermissionsMixin
 
 class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
-    first_name = models.CharField(max_length=200)
-    last_name = models.CharField(max_length=200)
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    ntnu_username = models.CharField(max_length=100, unique=True, blank=True)
     member = models.BooleanField(default=False)
     staff = models.BooleanField(default=False)
     admin = models.BooleanField(default=False)
     superuser = models.BooleanField(default=False)
-    photo = models.ImageField(upload_to='api/photos')
+    photo = models.ImageField(upload_to='api/photos', blank=True)
 
     USERNAME_FIELD = 'email'
 
