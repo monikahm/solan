@@ -4,3 +4,4 @@ from .info import *
 from .partner import *
 from .startup import *
 from .user import *
+from .quote import *

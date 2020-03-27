@@ -1,6 +1,7 @@
 from rest_framework import routers
 from .views.startup import StartupView
 from django.urls import path, include
+from django.conf.urls import url
 from .views.login import LoginView
 from .views.logout import LogoutView
 from.views.user_create import CreateUserView
@@ -10,6 +11,7 @@ from .views.blogpost import BlogPostView
 from .views.partner import PartnerView
 from .views.quote import QuoteView
 from .views.info import InfoView
+from .views.dataporten import *
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -23,9 +25,12 @@ router.register('api/partners', PartnerView, 'partners')
 router.register('api/info', InfoView, 'info')
 router.register('api/quote', QuoteView, 'quote')
 
+
 urlpatterns = [
     path('', include(router.urls)),
     path('api/login', LoginView.as_view()),
     path('api/logout', LogoutView.as_view()),
-    path('api/register', CreateUserView.as_view())
+    path('api/register', CreateUserView.as_view()),
+    url(r'^study', study),
+    url(r'^callback', study_callback),
     ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
