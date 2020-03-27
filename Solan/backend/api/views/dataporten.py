@@ -97,7 +97,7 @@ def study_callback(request):
         messages.error(
             request, "Forespørselen mangler påkrevde felter, vennligst prøv igjen."
         )
-        return redirect("")
+        return redirect('http://127.0.0.1:8000/admin')
     if (
             not request.session.get("dataporten_study_state", "")
             or request.session["dataporten_study_state"] != auth_resp["state"]
@@ -105,7 +105,7 @@ def study_callback(request):
         messages.error(
             request, "Verifisering av forespørselen feilet. Vennligst prøv igjen."
         )
-        return redirect('')
+        return redirect('http://127.0.0.1:8000/admin')
 
     args = {
         'code': auth_resp['code'],
@@ -137,7 +137,7 @@ def study_callback(request):
             "kontoen du er logget inn med hos Solan. Pass på at du er logget inn med din egen konto "
             "begge steder og prøv igjen."
         )
-        return redirect('http://127.0.0.1:3000/')
+        return redirect('http://127.0.0.1:8000/admin')
     elif not request.user.ntnu_username:
         pass
 
@@ -153,17 +153,17 @@ def study_callback(request):
         if not is_approved:
             messages.error(
                 request,
-                "Du er ikke medlem av testgruppe for Solan linjeforening "
+                "Du er ikke medlem av Solan linjeforening"
             )
 
-            return redirect('http://127.0.0.1:3000/')
+            return redirect('http://127.0.0.1:8000/admin')
 
     except IntegrityError:
         messages.error(
             request,
             "En bruker er allerede knyttet til denne NTNU-kontoen"
         )
-        return redirect('http://127.0.0.1:8000/')
+        return redirect('http://127.0.0.1:8000/admin')
 
     if is_approved:
         messages.success(
@@ -171,4 +171,4 @@ def study_callback(request):
             "Du er nå et medlem av Solan linjeforening!"
         )
 
-    return redirect('http://127.0.0.1:3000/')
+    return redirect('http://127.0.0.1:8000/admin')
