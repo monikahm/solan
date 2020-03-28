@@ -63,7 +63,7 @@ def approve_member(user, groups):
 def study(request):
     if  request.user.is_member:
         messages.info(request, "Du er allerede registrert som medlem.")
-        return redirect("profiles_active", active_tab="membership")
+        return redirect('http://127.0.0.1:8000/admin')
 
     client = client_setup(DATAPORTEN_CLIENT_ID, DATAPORTEN_CLIENT_SECRET)
 
