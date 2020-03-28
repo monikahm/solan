@@ -1,0 +1,52 @@
+.events-home-grid{
+    display: grid;
+    grid-template-areas:
+            'events_boxspacer events_boxspacer'
+            'events_A events_A'
+            'events_B events_B'
+            'events_C1 events_C2'
+            'events_D1 events_D2'
+            'events_E1 events_E2';
+}
+
+.events_boxspacer{
+    grid-area: events_boxspacer;
+}
+
+.events_A{
+    grid-area: events_A;
+    width: 100%
+}
+
+
+.events_B{
+    grid-area: events_B;
+
+}
+
+
+.events_C1{
+
+}
+
+.events_C2{
+
+}
+
+.events_D1{
+
+}
+
+.events_D2{
+
+}
+
+.events_E1{
+
+}
+
+.events_E2{
+
+}
+
+

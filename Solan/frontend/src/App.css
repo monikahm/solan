@@ -19,14 +19,8 @@ code {
     text-align: center;
     color: black;
     margin: 0;
-
-
 }
 
-.logo{
-    height: 10vw;
-    width: 10vw;
-}
 
 
 .Navbar{
@@ -34,7 +28,7 @@ code {
     background-color: #3A3E70;
     overflow: hidden;
     width: 100%;
-
+    height: 6vw;
 }
 
 
@@ -42,14 +36,14 @@ code {
 .Navbar a.logo:hover{
     color: white;
     background-color:#3A3E70;
-
 }
 
 
 .Nav_Links{
-    padding-top: 2vw;
+    padding-top: 1vw;
     float:right;
     padding-right: 6vw;
+
 }
 
 .Navbar a{
@@ -59,10 +53,10 @@ code {
     padding: 1.2vw 1.4vw;
     text-decoration: none;
     font-size: 20px;
+    border-bottom: 1px solid #ffcfab;
 }
 
 .Navbar a:hover {
-    background-color: #ddd;
     color: black;
 }
 

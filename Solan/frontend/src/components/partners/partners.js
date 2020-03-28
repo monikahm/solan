@@ -1,17 +1,32 @@
 import React, { useState } from 'react'
-import useFetch from '../api'
+import './partners.css'
+import picture from '../../assets/images/bannerbilde.PNG'
 
 function Partners() {
-  const [partners, setPartners] = useState([])
-  useFetch('http://127.0.0.1:8000/api/partners/', setPartners)
-
   return (
-    <div>
-      {partners.map((s, index) => (
-        <div key={index + s}>{s.url}</div>
-      ))}
+    <div className="partners-home-grid">
+      <div className="partners_boxspacer">
+        <div className="partners_A">
+          <img src={picture} alt="bannerpicture" className="partners_A" />
+        </div>
+
+        <div className="partners_B">
+          <h1>PARTNERS</h1>
+        </div>
+
+        <div className="partners_C1"></div>
+
+        <div className="partners_C2"></div>
+
+        <div className="partners_D1"></div>
+
+        <div className="partners_D2"></div>
+
+        <div className="partners_E1"></div>
+
+        <div className="partners_E2"></div>
+      </div>
     </div>
   )
 }
-
 export default Partners

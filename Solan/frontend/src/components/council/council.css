@@ -1,0 +1,51 @@
+.council-home-grid{
+    display: grid;
+    grid-template-areas:
+            'council_boxspacer council_boxspacer'
+            'council_A council_A'
+            'council_B council_B'
+            'council_C1 council_C2'
+            'council_D1 council_D2'
+            'council_E1 council_E2';
+}
+
+.council_boxspacer{
+    grid-area: council_boxspacer;
+}
+
+.council_A{
+    grid-area: council_A;
+    width: 100%;
+}
+
+
+.council_B{
+    grid-area: council_B;
+}
+
+
+.council_C1{
+
+}
+
+.council_C2{
+
+}
+
+.council_D1{
+
+}
+
+.council_D2{
+
+}
+
+.council_E1{
+
+}
+
+.council_E2{
+
+}
+
+

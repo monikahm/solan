@@ -1,21 +1,19 @@
-.grid-container {
+.startups-grid-container {
     display: grid;
     grid-template-areas:
-            'header header header'
-            'leftside cards rightside';
+            'header '
+            'cards';
     background-color: #FAF6F0;
-    grid-gap: 1vw;
     padding-bottom: 10vw;
 
 }
 
 .header {
     grid-area: header;
-
 }
 
 .banner-pic{
-    max-width: 100%;
+    width: 100%;
     padding-bottom: 3vw;
 }
 
@@ -41,14 +39,6 @@
 }
 
 
-.rightside {
-    grid-area: rightside;
-}
-
-
-.leftside {
-    grid-area: leftside;
-}
 
 
 

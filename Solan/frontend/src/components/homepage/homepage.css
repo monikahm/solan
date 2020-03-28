@@ -1,88 +1,91 @@
 .home-grid{
     display: grid;
     grid-template-areas:
-    'boxtop'
-    'boxmiddle'
-    'boxbottom';
+    'boxspacer boxspacer'
+    'A1 A2'
+    'B B'
+    'C1 C2'
+    'D1 D2'
+    'E1 E2';
 }
 
-
-.frontpage_banner{
-    padding-top: 2vw;
-    width: 80vw;
+.boxspacer{
+    grid-area: boxspacer;
+    background-color: #3A3E70;
+    height: 8vw;
 }
 
-
-.boxtop{
-    font-size: 1.4vw;
-    color: #ffcfab;
-    grid-area: boxtop;
-    padding: 3vw;
+.A1{
+    padding-top: 5vw;
+    grid-area: A1;
+    align-content: baseline;
+    padding-left: 10vw;
+    text-weight: 700;
     text-align: left;
-    padding-top:12vw;
-    height: 28vw;
-    background-color:#3A3E70;
+    height: 30vw;
+    color: #ffcfab;
+    font-weight: 700;
+    font-size: 2.5vw;
+    line-height: 4vw;
+    background-color: #3A3E70;
 }
 
 
-
-.boxtop_left{
-    margin-left: 15vw;
-    margin-bottom: 5vw;
+.A2{
+    padding-right: 15vw;
+    padding-top: 5vw;
+    grid-area: A2;
+    height: 30vw;
+    background-color: #3A3E70;
 }
 
-.boxtop_right{
-
+.B{
+    padding-top: 2vw;
+    grid-area: B;
+    height: 6vw;
+    background-color: #ffcfab;
 }
 
-.boxtop_bottom{
-    height: 10vw;
-    width: 100%;
+
+.C1{
+    grid-area: C1;
+    padding-top: 5vw;
+    height: 30vw;
+    background-color: #faf6f3;
+}
+
+.C2{
+    grid-area: C2;
+    padding-top: 5vw;
+    height: 30vw;
+    background-color: #faf6f3;
+    text-align: left;
+}
+
+.D1{
+    grid-area: D1;
+    height: 30vw;
+    background-color: #faf6f3;
+}
+
+.D2{
+    grid-area: D2;
+    height: 30vw;
+    background-color: #faf6f3;
+}
+
+.E1{
+    padding-left: 10vw;
+    text-align: left;
+    grid-area: E1;
+    height: 30vw;
+    background-color: #faf6f3;
+}
+
+.E2{
+    grid-area: E2;
+    height: 30vw;
+    background-color: #faf6f3;
 }
 
 
-
-.boxmiddle{
-    font-size: 2vw;
-    grid-area: boxmiddle;
-    height: 50vw;
-    width: 100%;
-    background-color:#FAF6F3;
-}
-
-.boxbottom{
-    grid-area: boxbottom;
-    padding-bottom: 60vw;
-    background-color:#FAF6F3;
-    margin-top: 0.2vw;
-
-}
-
-.boxbottomright{
-    position: absolute;
-    margin-left: 40%;
-    height:50vw;
-    width: 50%;
-
-}
-
-.boxbottomleft{
-    position: absolute;
-    height:50vw;
-    width: 50%;
-
-}
-
-.FAQButton{
-    color: #A6A6C2;
-    border: none;
-    font-size: 1vw;
-    border-radius: 0.3vw;
-    background-color: #FFFFFF;
-    height: 3vw;
-    cursor: pointer;
-}
-
-.InstagramEmbed{
-    padding-left: 5vw;
-}
