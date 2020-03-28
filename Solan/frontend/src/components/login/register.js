@@ -1,4 +1,4 @@
-import React, { useState, setState } from 'react'
+import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Router, Link } from '@reach/router'
 import { RegisterAPI } from '../../services/loginservices'
@@ -14,8 +14,8 @@ export default function Register() {
         last_name: '',
     })
 
-    function updateField(e) {
-        setState({
+    const updateField = (e) => {
+        setProfile({
             ...profile,
             [e.target.name]: e.target.value
         })
@@ -29,7 +29,6 @@ export default function Register() {
             )
         } catch (ex) {
             console.log(ex)
-            console.log(profile)
         }
     }
 

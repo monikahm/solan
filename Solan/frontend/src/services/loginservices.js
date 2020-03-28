@@ -17,16 +17,16 @@ async function RegisterAPI(url, profile) {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      "email": profile.email,
-      "ntnu_username": profile.ntnu_username,
-      "password": profile.password,
-      "first_name": profile.first_name,
-      "last_name": profile.last_name
+      email: profile.email,
+      ntnu_username: profile.ntnu_username,
+      password: profile.password,
+      first_name: profile.first_name,
+      last_name: profile.last_name
     })
   }
   const result = await fetch(url, options).then((res) => res.json())
-  localStorage.setItem('token', result.token)
-  return result.token
+  console.log(profile)
+  return result
 }
 
 
