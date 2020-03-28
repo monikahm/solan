@@ -8,6 +8,7 @@ import CouncilList from './components/council/council'
 import AboutSolan from './components/about/about'
 import KontaktOss from './components/kontaktoss/kontakt-oss'
 import Login from './components/login/login'
+import Register from './components/login/register'
 
 let Home = () => <div></div>
 
@@ -42,6 +43,7 @@ const App = () => {
         <CouncilList path="council">Council</CouncilList>
         <KontaktOss path="kontakt">Kontakt oss</KontaktOss>
         <Login path="login">Login</Login>
+        <Register path="register">Register</Register>
       </Router>
     </div>
   )

@@ -60,7 +60,7 @@ export default function Login() {
               <Link to="/register">Registrer her!</Link>
             </div>
             <Router>
-              <Register path="/register"></Register>
+              <Register path="/register">Register</Register>
             </Router>
           </>
         )}
