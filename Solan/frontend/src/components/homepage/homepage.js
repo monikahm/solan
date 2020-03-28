@@ -2,20 +2,12 @@ import React, { useState } from 'react';
 import './homepage.css'
 import picture from "../../assets/images/bruce-bannerbilde.png"
 import picture2 from "../../assets/images/partnere.PNG"
-import InstagramEmbed from 'react-instagram-embed';
 
 function Homepage() {
 
     return (
-
-
         <div className="home-grid">
-
-
             <div className="boxtop">
-
-
-
                 <div className="boxtop_left">
                     <h1>
                         Solan<br />
@@ -25,11 +17,7 @@ function Homepage() {
                     </h1>
 
                 </div>
-
                 <div className="boxtop_right">
-
-
-
                 </div>
                 <div className="boxtop_bottom">
                     <img src={picture2} alt="partnere" className="partnere" />
@@ -57,32 +45,7 @@ function Homepage() {
                         <button className="FAQButton">Kontakt oss</button>
 
                 </div>
-
-
-                <div className= "boxbottomleft">
-                    <div className="InstagramEmbed">
-                        <InstagramEmbed
-                            url='https://www.instagram.com/p/B9Y-EJTAxM-/'
-                            maxWidth={320} /* Minimum 320 */
-                            hideCaption={false}
-                            containerTagName='div'
-                            protocol=''
-                            injectScript
-                            onLoading={() => {}}
-                            onSuccess={() => {}}
-                            onAfterRender={() => {}}
-                            onFailure={() => {}}
-                        />
-                    </div>
-                </div>
-
-
-
             </div>
-
-
-
-
         </div>
 
     )
