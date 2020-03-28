@@ -6,6 +6,7 @@ import './login.css'
 import { LoginAPI, logout } from '../../services/loginservices'
 import Register from './register'
 import { Router, Link } from '@reach/router'
+import { setConstantValue } from 'typescript'
 
 export default function Login() {
   const { user, loggedIn } = useSelector((state) => state)
