@@ -49,7 +49,7 @@ def fetch_groups_information(access_token, show_all=False):
 def approve_member(user, groups):
     study_group = {}
     for group in groups:
-        if group.get("id") == 'fc:adhoc:bddd4200-fa1c-40a4-86e2-a08cd1089cb6':
+        if group.get("id") == 'fc:adhoc:bddd4200-fa1c-40a4-86e2-a08cd1089cb6' or group.get("id") == 'fc:fs:fs:prg:ntnu.no:MENTRE':
             study_group = group
     if study_group:
         user.member = True
@@ -61,6 +61,10 @@ def approve_member(user, groups):
 
 @login_required()
 def study(request):
+    if  request.user.is_member:
+        messages.info(request, "Du er allerede registrert som medlem.")
+        return redirect("profiles_active", active_tab="membership")
+
     client = client_setup(DATAPORTEN_CLIENT_ID, DATAPORTEN_CLIENT_SECRET)
 
     # Generate random values used to verify that it's the same user when in the callback.
@@ -138,8 +142,6 @@ def study_callback(request):
             "begge steder og prøv igjen."
         )
         return redirect('http://127.0.0.1:8000/admin')
-    elif not request.user.ntnu_username:
-        pass
 
     # Getting information about study of the user
     groups = fetch_groups_information(access_token)
