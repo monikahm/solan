@@ -147,3 +147,5 @@ CORS_ALLOW_METHODS = (
         'DELETE',
         'OPTIONS'
     )
+
+DATE_INPUT_FORMATS = ['%d-%m-%y']

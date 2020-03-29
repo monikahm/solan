@@ -6,6 +6,7 @@ from .models.blogpost import BlogPost
 from .models.partner import Partner
 from .models.info import Info
 from .models.quote import Quote
+from .models.event import Event
 from django.forms import TextInput, Textarea
 from django.db import models
 
@@ -24,3 +25,4 @@ admin.site.register(BlogPost, YourModelAdmin)
 admin.site.register(Partner, YourModelAdmin)
 admin.site.register(Info, YourModelAdmin)
 admin.site.register(Quote, YourModelAdmin)
+admin.site.register(Event, YourModelAdmin)
