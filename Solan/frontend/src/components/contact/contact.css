@@ -1,0 +1,45 @@
+.contact-home-grid{
+    display: grid;
+    grid-template-areas:
+            'contact_boxspacer contact_boxspacer'
+            'contact_A contact_A'
+            'contact_B contact_B';
+}
+
+.contact_boxspacer{
+    grid-area: contact_boxspacer;
+    height: 6vw;
+}
+
+.contact_A{
+    grid-area: contact_A;
+    width: 100vw;
+    height: 23vw;
+    color: white;
+    background:
+            linear-gradient(
+                    rgba(58,62,112),
+                    rgba(255, 0, 0, 0.45)
+            ),
+            url(../../assets/images/bannerbilde3.PNG);
+}
+
+.contact_banner_image_text{
+    font-size: 4vw;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.contact_B{
+    width: 10vw;
+    grid-area: contact_B;
+    padding-top: 10vw;
+    padding-left: 30vw;
+
+}
+
+

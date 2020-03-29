@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './startups.css'
 import useFetch from '../api'
-import picture from '../../assets/images/bannerbilde.PNG'
 
 function FetchStartups() {
   const [startups, setStartups] = useState([])

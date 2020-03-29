@@ -15,6 +15,7 @@
 }
 
 .startups_A{
+    grid-area: startups_A;
     width: 100vw;
     height: 23vw;
     color: white;
@@ -34,8 +35,10 @@
     transform: translate(-50%, -50%);
 }
 
-.cards {
-    grid-area: cards;
+.startups_B {
+    grid-area: startups_B;
+    padding-top: 5vw;
+    padding-left: 20vw;
     display: flex;
     flex-direction: row;
     width: 80vw;
