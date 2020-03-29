@@ -11,6 +11,7 @@ from .views.blogpost import BlogPostView
 from .views.partner import PartnerView
 from .views.quote import QuoteView
 from .views.info import InfoView
+from .views.event import EventView
 from .views.dataporten import *
 from django.conf import settings
 from django.conf.urls.static import static
@@ -24,6 +25,7 @@ router.register('api/blogposts', BlogPostView, 'blogposts')
 router.register('api/partners', PartnerView, 'partners')
 router.register('api/info', InfoView, 'info')
 router.register('api/quote', QuoteView, 'quote')
+router.register('api/event', EventView, 'event')
 
 
 urlpatterns = [
