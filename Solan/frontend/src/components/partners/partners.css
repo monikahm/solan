@@ -11,42 +11,49 @@
 
 .partners_boxspacer{
     grid-area: partners_boxspacer;
+    height: 6vw;
 }
-
 .partners_A{
     grid-area: partners_A;
-    width: 100%
+    width: 100vw;
+    height: 23vw;
+    color: white;
+    background:
+            linear-gradient(
+                    rgba(58,62,112),
+                    rgba(255, 0, 0, 0.45)
+            ),
+            url(../../assets/images/bannerbilde3.PNG);
+}
 
+.partners_banner_image_text{
+    font-size: 5vw;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
 .partners_B{
     grid-area: partners_B;
 }
-
-
 .partners_C1{
-
 }
 
 .partners_C2{
-
 }
 
 .partners_D1{
-
 }
 
 .partners_D2{
-
 }
 
 .partners_E1{
-
 }
 
 .partners_E2{
-
 }
 
 

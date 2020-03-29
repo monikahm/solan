@@ -9,11 +9,15 @@ function FetchStartups() {
 
   return (
     <div className="startups-grid-container">
-      <div className="header">
-        <img src={picture} alt="bannerpicture" className="banner-pic" />
+      <div className="startups_boxspacer"></div>
+
+      <div className="startups_A">
+        <div className="startups_banner_image_text">
+          <h1>Startups</h1>
+        </div>
       </div>
 
-      <div className="cards">
+      <div className="startups_B">
         {startups.map((s, index) => (
           <div className="card" key={index + s}>
             <div className="card_top_half">

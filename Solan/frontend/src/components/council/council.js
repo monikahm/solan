@@ -12,12 +12,12 @@ function CouncilList() {
       <div className="council_boxspacer"></div>
 
       <div className="council_A">
-        <img src={picture} alt="bannerpicture" className="council_A" />
+        <div className="council_banner_image_text">
+          <h1>Styremedlemmer</h1>
+        </div>
       </div>
 
       <div className="council_B">
-        <h1>STYREMEDLEMMER</h1>
-
         {council.map((s) => (
           <>
             <img className="council_image" src={s.photo} alt={s.photo}></img>
