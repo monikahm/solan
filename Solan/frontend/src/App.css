@@ -5,7 +5,9 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-y: scroll;
 }
+
 
 
 code {
@@ -32,13 +34,6 @@ code {
 }
 
 
-
-.Navbar a.logo:hover{
-    color: white;
-    background-color:#3A3E70;
-}
-
-
 .Nav_Links{
     padding-top: 1vw;
     float:right;
@@ -56,41 +51,6 @@ code {
     border-bottom: 1px solid #ffcfab;
 }
 
-.Navbar a:hover {
-}
-
-.Navbar a.active {
-    background-color: #4CAF50;
-    color: white;
-}
-
-
 /* FOOTER STYLING*/
 
-.footer {
-    visibility: hidden;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #ffcfab;
-    color: white;
-}
-
-.footer a{
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-.footer a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.footer a.active {
-    color: white;
-}
 

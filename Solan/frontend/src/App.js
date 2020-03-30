@@ -23,12 +23,10 @@ const App = () => {
           <Link to="council">Styremedlemmer</Link>
           <Link to="partners">For Bedrifter</Link>
           <Link to="events">Arrangementer</Link>
+          <Link to="contact">Kontakt oss</Link>
         </div>
       </nav>
 
-        <div className="footer">
-        <Link to="contact">Kontakt oss</Link>
-        </div>
 
       <Router>
         <Homepage path="homepage">Homepage</Homepage>
