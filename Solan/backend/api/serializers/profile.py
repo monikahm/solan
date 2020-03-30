@@ -8,4 +8,4 @@ class ProfileSerializer(ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('email', 'first_name', 'last_name','photo')
+        fields = ('email','ntnu_username','council_position','first_name', 'last_name','photo')
