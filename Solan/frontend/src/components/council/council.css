@@ -16,7 +16,7 @@
 
 .council_A{
     grid-area: council_A;
-    width: 100vw;
+    width: 100%;
     height: 23vw;
     color: white;
     background:

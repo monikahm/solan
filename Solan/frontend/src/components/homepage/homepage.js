@@ -4,6 +4,7 @@ import picture from '../../assets/images/bigsolanlogo.PNG'
 import picture2 from '../../assets/images/solanpåpinne2.PNG'
 import picture3 from '../../assets/images/partnerspicture.PNG'
 
+
 function Homepage() {
 
     return (
@@ -71,7 +72,15 @@ function Homepage() {
                 <p>Form</p>
             </div>
 
+
+
+
+
+
+
         </div>
+
+
 
 )
 

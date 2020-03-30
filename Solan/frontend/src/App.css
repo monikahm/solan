@@ -3,12 +3,17 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     overflow-y: scroll;
+
 }
 
-
+.App-grid {
+    display: grid;
+    grid-template-areas:
+    'Navbar'
+    'F'
+    'G';
+}
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -26,6 +31,7 @@ code {
 
 
 .Navbar{
+    grid-area: Navbar;
     position: absolute;
     background-color: #3A3E70;
     overflow: hidden;
@@ -53,4 +59,28 @@ code {
 
 /* FOOTER STYLING*/
 
+.F{
+    grid-area: F;
+    width: 100%;
+    height: 25vw;
+    background-color: #ffcfab;
 
+}
+
+.G{
+    grid-area: G;
+    height: 4.5vw;
+    color: #ffcfab;
+    background-color: #faf6f3;
+
+}
+
+.solanfooterlogo{
+    padding-top: 5vw;
+    padding-left: 10vw;
+    padding-bottom: 5vw;
+}
+
+.G_text{
+padding-left: 40vw;
+}

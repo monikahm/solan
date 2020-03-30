@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './partners.css'
-import picture from '../../assets/images/bannerbilde.PNG'
+
 
 function Partners() {
   return (

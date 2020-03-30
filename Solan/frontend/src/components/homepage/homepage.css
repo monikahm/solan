@@ -13,6 +13,7 @@
     grid-area: boxspacer;
     background-color: #3A3E70;
     height: 8vw;
+    width: 100%;
 }
 
 .A1{
@@ -62,12 +63,11 @@
     text-align: left;
 }
 
-.D1{
+.D1 {
     grid-area: D1;
     height: 30vw;
     background-color: #faf6f3;
 }
-
 .D2{
     grid-area: D2;
     height: 30vw;
@@ -80,6 +80,8 @@
     grid-area: E1;
     height: 30vw;
     background-color: #faf6f3;
+    font-family: 'Gt walsheim pro', sans-serif;
+    font-weight: 500;
 }
 
 .E2{
@@ -87,5 +89,4 @@
     height: 30vw;
     background-color: #faf6f3;
 }
-
 

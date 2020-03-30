@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './events.css'
-import picture from '../../assets/images/bannerbilde.PNG'
 
 function Events() {
   return (

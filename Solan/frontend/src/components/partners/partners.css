@@ -3,10 +3,7 @@
     grid-template-areas:
             'partners_boxspacer partners_boxspacer'
             'partners_A partners_A'
-            'partners_B partners_B'
-            'partners_C1 partners_C2'
-            'partners_D1 partners_D2'
-            'partners_E1 partners_E2';
+            'partners_B partners_B';
 }
 
 .partners_boxspacer{
@@ -15,7 +12,7 @@
 }
 .partners_A{
     grid-area: partners_A;
-    width: 100vw;
+    width: 100%;
     height: 23vw;
     color: white;
     background:
@@ -37,23 +34,6 @@
 
 .partners_B{
     grid-area: partners_B;
-}
-.partners_C1{
-}
-
-.partners_C2{
-}
-
-.partners_D1{
-}
-
-.partners_D2{
-}
-
-.partners_E1{
-}
-
-.partners_E2{
 }
 
 
