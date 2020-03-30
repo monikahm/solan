@@ -4,7 +4,7 @@
             'startups_boxspacer'
             'startups_A '
             'startups_B';
-    background-color: #FAF6F0;
+    background-color: #FAF6F3;
     padding-bottom: 10vw;
 
 }
@@ -38,58 +38,67 @@
 .startups_B {
     grid-area: startups_B;
     padding-top: 5vw;
-    padding-left: 20vw;
+    padding-left: 15vw;
     display: flex;
     flex-direction: row;
     width: 80vw;
     justify-content: flex-start;
     flex-wrap: wrap;
+
 }
 
 
 .card {
     margin: 1vw;
-    background-color: #FBF9FF;
-    height: 18vw;
-    width: 14vw;
-    text-align: center;
+    background-color: #FBFAFF;
+    height: 24vw;
+    width: 16vw;
     border-radius: 1.5vw;
-
+    position: relative;
+    top: 0;
+    transition: top ease 0.1s;
 }
 
-
-
-
+.card:hover{
+    top:-20px;
+}
 
 .startupImage{
-    height: 8vw;
-    width: 14vw;
+    height: 10vw;
+    width: 16vw;
 }
 
 .readmorebtn {
     color: #A6A6C2;
     border: none;
     font-size: 1vw;
-    border-radius: 0.3vw;
     background-color: #FFFFFF;
-    height: 3vw;
+    height: 2.5vw;
     cursor: pointer;
 }
 
 .startupinfo{
+    padding-top: 1vw;
     font-size: 0.8vw;
 }
 
 .startupname{
     font-size: 1.1vw;
-    padding-bottom: 1vw;
 }
 
-.card_top_half{
-    height: 14vw;
-
+.card_top{
+    height: 8vw;
+    background-color: #3e8f3e;
 }
 
-.card_bottom_half{
-    height: 4vw;
+.card_middle{
+    padding-top: 3vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    height: 8vw;
+    text-align: left;
+}
+
+.card_bottom{
+    height: 6vw;
 }
