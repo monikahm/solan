@@ -24,7 +24,7 @@ const App = () => {
           <Link to="council">Styremedlemmer</Link>
           <Link to="partners">For Bedrifter</Link>
           <Link to="events">Arrangementer</Link>
-          <Link to="contact">Kontakt oss</Link>
+
         </div>
       </nav>
 
@@ -38,7 +38,16 @@ const App = () => {
       </Router>
 
       <div className="F">
-        <img src={picture4} alt="solanfooterlogo" className="solanfooterlogo" />
+        <div className="footer_logo">
+          <img
+            src={picture4}
+            alt="solanfooterlogo"
+            className="solanfooterlogo"
+          />
+        </div>
+        <div className="footer_links">
+          <Link to="contact">Kontakt oss</Link>
+        </div>
       </div>
 
       <div className="G">

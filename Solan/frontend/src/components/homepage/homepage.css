@@ -41,6 +41,7 @@
 }
 
 .B{
+    padding-left: 12vw;
     padding-top: 2vw;
     grid-area: B;
     height: 6vw;
