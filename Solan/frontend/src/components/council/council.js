@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import useFetch from '../api'
 import './council.css'
 
-function CouncilList() {
+function Council() {
   const [council, setCouncil] = useState([])
   useFetch('http://127.0.0.1:8000/api/councilposition/', setCouncil)
 
@@ -29,4 +29,4 @@ function CouncilList() {
   )
 }
 
-export default CouncilList
+export default Council

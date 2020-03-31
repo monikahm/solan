@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './startups.css'
 import useFetch from '../api'
 
-function FetchStartups() {
+function Startups() {
   const [startups, setStartups] = useState([])
   useFetch('http://127.0.0.1:8000/api/startups/', setStartups)
 
@@ -38,4 +38,4 @@ function FetchStartups() {
   )
 }
 
-export default FetchStartups
+export default Startups

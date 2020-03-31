@@ -29,10 +29,9 @@ python3 manage.py migrate
 python3 manage.py runserver
 ```
 
-To run frontend go to frontend folder and install either yarn
+To run frontend you will need to have yarn ([see installation](https://classic.yarnpkg.com/en/docs/install/#mac-stable)). Then go to frontend folder and run command:
 ```
 yarn
-
 ```
 To start frontend 
 ```
