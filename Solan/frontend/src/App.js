@@ -1,48 +1,61 @@
 import React from 'react'
 import './App.css'
-import FetchStartups from './components/startups/startups'
-import BlogPosts from './components/blogposts/blogposts'
 import { Router, Link } from '@reach/router'
+import Startups from './components/startups/startups'
 import Partners from './components/partners/partners'
-import CouncilList from './components/council/council'
-import AboutSolan from './components/about/about'
-import KontaktOss from './components/kontaktoss/kontakt-oss'
+import Council from './components/council/council'
+import Homepage from './components/homepage/homepage'
+import Events from './components/events/events'
+import Contact from './components/contact/contact'
+import picture4 from './assets/images/solanfooterlogo.PNG'
 import Login from './components/login/login'
 
 let Home = () => <div></div>
 
 const App = () => {
   return (
-    <div className="App">
+    <div className="App-grid">
       <nav className="Navbar">
-        <a href="#default" className="logo">
-          Solan Linjeforening
+        <a href="homepage" className="logo">
+          Solan
         </a>
 
         <div className="Nav_Links">
-          <Link to="/">Hjem</Link>
-          <Link to="about">Om oss</Link>
           <Link to="startups">Startups</Link>
-          <Link to="blogs">Blogg</Link>
-          <Link to="council">Styret</Link>
-          <Link to="login">Login</Link>
+          <Link to="council">Styremedlemmer</Link>
+          <Link to="partners">For Bedrifter</Link>
+          <Link to="events">Arrangementer</Link>
         </div>
       </nav>
 
-      <nav className="Navbar_footer">
-        <Link to="partners">Partners</Link>
-        <Link to="kontakt">Kontakt oss</Link>
-      </nav>
       <Router>
-        <Home path="/" />
-        <AboutSolan path="about">About</AboutSolan>
-        <FetchStartups path="startups">Startups</FetchStartups>
-        <BlogPosts path="blogs">Blog</BlogPosts>
+        <Homepage path="homepage">Homepage</Homepage>
+        <Startups path="startups">Startups</Startups>
         <Partners path="partners">Partners</Partners>
-        <CouncilList path="council">Council</CouncilList>
-        <KontaktOss path="kontakt">Kontakt oss</KontaktOss>
+        <Council path="council">Council</Council>
+        <Events path="events">Council</Events>
+        <Contact path="contact">Kontakt Oss</Contact>
         <Login path="login">Login</Login>
       </Router>
+
+      <div className="F">
+        <div className="footer_logo">
+          <img
+            src={picture4}
+            alt="solanfooterlogo"
+            className="solanfooterlogo"
+          />
+        </div>
+        <div className="footer_links">
+          <Link to="contact">Kontakt oss</Link>
+        </div>
+      </div>
+
+      <div className="G">
+        <div className="G_text">
+          <p>Copyright and All rights reserved | Solan linjeforening, 2020</p>
+        </div>
+      </div>
     </div>
   )
 }

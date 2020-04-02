@@ -1,0 +1,72 @@
+.events-home-grid{
+    display: grid;
+    grid-template-areas:
+            'events_boxspacer events_boxspacer'
+            'events_A events_A'
+            'events_B events_B'
+            'events_C1 events_C2'
+            'events_D1 events_D2'
+            'events_E1 events_E2';
+}
+
+.events_boxspacer{
+    grid-area: events_boxspacer;
+    height: 6vw;
+}
+
+.events_A{
+    grid-area: events_A;
+    width: 100%;
+    height: 23vw;
+    color: white;
+    background:
+            linear-gradient(
+                    rgba(58,62,112),
+                    rgba(55, 207, 171, 0)
+            ),
+            url(../../assets/images/bannerbilde3.PNG);
+}
+
+.events_banner_image_text{
+    color: #000;
+    opacity: 0.71;
+    font-size: 5vw;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.events_B{
+    grid-area: events_B;
+
+}
+
+
+.events_C1{
+
+}
+
+.events_C2{
+
+}
+
+.events_D1{
+
+}
+
+.events_D2{
+
+}
+
+.events_E1{
+
+}
+
+.events_E2{
+
+}
+
+
