@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+   backend:
+     build: ./backend
+     command: python manage.py runserver 0.0.0.0:8000
+     volumes:
+       - /src
+     ports:
+       - "8000:8000"
+     container_name: backend
+   frontend:
+     build: ./frontend
+     expose:
+       - "3000"
+     container_name: frontend
+   nginx-proxy:
+     build: ./
+     ports:
+       - "80:80"
+     container_name: nginx-proxy
+     

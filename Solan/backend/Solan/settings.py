@@ -25,7 +25,8 @@ SECRET_KEY = 'js$(^nvu0*s4o@h5+)^j6o0t4^vxaxh^gt7#j3u6vj!&ef2423'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
+
 
 
 # Application definition
@@ -147,3 +148,7 @@ CORS_ALLOW_METHODS = (
         'DELETE',
         'OPTIONS'
     )
+
+USE_X_FORWARDED_HOST = True
+USE_X_FORWARDED_PORT = True
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")

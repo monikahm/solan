@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import { Router, Link } from '@reach/router'
 import { RegisterAPI } from '../../services/loginservices'
 import Login from './login'
+import userManager from '../../services/userRegister'
 
 export default function Register() {
     const { user, loggedIn } = useSelector((state) => state)
@@ -23,10 +24,7 @@ export default function Register() {
     async function handleSubmit(e) {
         e.preventDefault()
         try {
-            const user = await RegisterAPI(
-                'http://localhost:8000/api/register',
-                profile
-            )
+            userManager.signinRedirect();
         } catch (ex) {
             console.log(ex)
         }
