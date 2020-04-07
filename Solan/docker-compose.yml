@@ -10,11 +10,15 @@ services:
      container_name: backend
    frontend:
      build: ./frontend
+     volumes:
+      - ./frontend:/frontend
      expose:
        - "3000"
      container_name: frontend
    nginx-proxy:
      build: ./
+     volumes:
+       - ./default.conf:/etc/nginx/conf.d/default.conf:ro
      ports:
        - "80:80"
      container_name: nginx-proxy

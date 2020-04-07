@@ -17,7 +17,6 @@ export default function Login() {
     e.preventDefault()
     try {
       const user = await LoginAPI(
-        'http://localhost:8000/api/login',
         email,
         password
       )

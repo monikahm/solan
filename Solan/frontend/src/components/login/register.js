@@ -24,7 +24,7 @@ export default function Register() {
     async function handleSubmit(e) {
         e.preventDefault()
         try {
-            userManager.signinRedirect();
+            const reg = await RegisterAPI(profile);
         } catch (ex) {
             console.log(ex)
         }

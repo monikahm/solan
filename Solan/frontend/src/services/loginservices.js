@@ -1,4 +1,6 @@
-async function LoginAPI(url, username, password) {
+const BACKEND_URL = 'http://localhost'
+
+async function LoginAPI(username, password) {
   const options = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -7,12 +9,20 @@ async function LoginAPI(url, username, password) {
       password
     })
   }
-  const result = await fetch(url, options).then((res) => res.json())
+  const result = await fetch(BACKEND_URL + '/api/login', options).then((res) =>
+    res.json()
+  )
+  document.cookie =
+    'csrftoken=' +
+    result.token +
+    '; expires=' +
+    new Date(Date.now() + 60 * 60 * 24 * 365 * 1000).toUTCString()
+  console.log("asdasdasd")
   localStorage.setItem('token', result.token)
   return result.token
 }
 
-async function RegisterAPI(url, profile) {
+async function RegisterAPI(profile) {
   const options = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -24,14 +34,31 @@ async function RegisterAPI(url, profile) {
       last_name: profile.last_name
     })
   }
-  const result = await fetch(url, options).then((res) => res.json())
+  const result = await fetch(BACKEND_URL + '/study', options).then((res) => res.json())
   console.log(profile)
   return result
 }
-
-
-function logout() {
-  localStorage.clear()
+function delete_cookie( name ) {
+  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+async function logoutAPI(){
+  const options = {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' }
+  }
+  const res = await fetch(BACKEND_URL + '/api/logout', options)
+  return res
+}
+async function logout() {
+  try {
+    localStorage.clear()
+    const usr = await logoutAPI()
+    delete_cookie("csrftoken")
+    delete_cookie("sessionid")  
+  }
+  catch(ex){
+    console.log(ex)
+  }
 }
 
 function getToken() {
