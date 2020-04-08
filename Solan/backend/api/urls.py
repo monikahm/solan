@@ -19,7 +19,7 @@ from django.conf.urls.static import static
 
 router = routers.DefaultRouter()
 router.register('api/startups', StartupView, 'startups')
-router.register('api/profile', ProfileView, 'profile')
+router.register('api/profiles', ProfileView, 'profile')
 router.register('api/councilposition', CouncilPositionView, 'council_position')
 router.register('api/blogposts', BlogPostView, 'blogposts')
 router.register('api/partners', PartnerView, 'partners')
