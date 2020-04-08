@@ -1,4 +1,4 @@
-const BACKEND_URL = 'http://localhost'
+const BACKEND_URL = 'http://127.0.0.1'
 
 async function LoginAPI(username, password) {
   const options = {
