@@ -2,15 +2,16 @@ import React, { useState } from 'react'
 import './partners.css'
 import picture10 from '../../assets/images/arrow.PNG'
 import picture11 from '../../assets/images/computer.PNG'
+import ContactForm from '../contactForm/contactForm'
 
 function Partners() {
   return (
     <div className="partners-home-grid">
       <div className="partners_boxspacer"></div>
       <div className="partners_A">
-        <div className="partners_banner_image_text">
-          <h1>Bedrifter</h1>
-        </div>
+        <p className="partners_banner_image_text">
+          Bedrifter
+        </p>
       </div>
 
       <div className="partners_B">
@@ -29,7 +30,7 @@ function Partners() {
         <img src={picture10} alt="arrow" className="arrow" />
       </div>
 
-      <div className="partners_C2">
+      {/* <div className="partners_C2">
         <h1>
           Workshop med studentene <br />
           på NTNUs Entreprenørskole
@@ -44,9 +45,9 @@ function Partners() {
           <br />
           gjennomført alt fra pitche-konkurranser til markedsundersøkelser.
         </p>
-      </div>
+      </div> */}
 
-      <div className="partners_D1">
+      {/* <div className="partners_D1">
         <h1>
           Synliggjøring og profilering <br />
           på vår nettside og
@@ -80,6 +81,9 @@ function Partners() {
           <br />
           gjennomført alt fra pitche-konkurranser til markedsundersøkelser.
         </p>{' '}
+      </div> */}
+      <div className="contact_form_A1">
+        <ContactForm />
       </div>
     </div>
   )

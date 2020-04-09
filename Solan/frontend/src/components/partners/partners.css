@@ -7,34 +7,36 @@
             'partners_B partners_B'
             'partners_C1 partners_C2'
             'partners_D1 partners_D2'
-            'partners_E1 partners_E2';
+            'partners_E1 partners_E2'
+            'contact_form_A1 contact_form_A1';
 }
 
 .partners_boxspacer{
     grid-area: partners_boxspacer;
-    height: 6vw;
+    height: 52px;
 }
 .partners_A{
     grid-area: partners_A;
+    display: flex;
     width: 100%;
-    height: 23vw;
+    height: 400px;
     color: white;
+    align-items: center;
+    justify-content: center;
     background:
             linear-gradient(
                     rgba(58,62,112),
                     rgba(55, 207, 171, 0)
             ),
             url(../../assets/images/bannerbilde3.PNG);
+    background-size: 100% 100%;
 }
 
 .partners_banner_image_text{
     color: #000;
     opacity: 0.71;
-    font-size: 5vw;
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: bold;
 }
 
 
@@ -46,7 +48,7 @@
 .partners_C1{
     padding-top: 5vw;
     grid-area: partners_C1;
-    padding-left: 20vw;
+    padding-left: 10vw;
 
 }
 
@@ -62,7 +64,7 @@
     text-align: center;
     padding-top: 8vw;
     grid-area: partners_D1;
-    padding-left: 20vw;
+    padding-left: 10vw;
 
 }
 
@@ -75,7 +77,7 @@
 .partners_E1{
     padding-top: 5vw;
     grid-area: partners_E1;
-    padding-left: 20vw;
+    padding-left: 10vw;
 
 }
 
@@ -85,4 +87,26 @@
     grid-area: partners_E2;
     padding-bottom: 10vw;
 
+}
+
+.contact_form_A1 {
+    grid-area: contact_form_A1;
+}
+
+.contact_form{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: #ffcfab
+}
+
+@media(max-width: 700px) {
+    .partners_A {
+        height: 300px;
+        /* margin-top: 60px; */
+    }
+
+    .partners_boxspacer {
+        height: 0px;
+    }
 }

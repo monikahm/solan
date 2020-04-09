@@ -5,36 +5,36 @@
             'startups_A '
             'startups_B';
     background-color: #FAF6F3;
-    padding-bottom: 10vw;
+    /* padding-bottom: 10vw; */
 
 }
 
 .startups_boxspacer{
     grid-area: startups_boxspacer;
-    height: 6vw;
+    height: 52px;
 }
 
 .startups_A{
-    grid-area: startups_A;
+    display: flex;
     width: 100%;
-    height: 23vw;
+    height: 400px;
     color: white;
+    align-items: center;
+    justify-content: center;
     background:
             linear-gradient(
-                    rgb(58,62,112),
+                    rgba(58,62,112),
                     rgba(55, 207, 171, 0)
             ),
             url(../../assets/images/bannerbilde3.PNG);
+    background-size: 100% 101%; 
 }
 
 .startups_banner_image_text{
     color: #000;
     opacity: 0.71;
-    font-size: 5vw;
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .startups_B {
@@ -47,6 +47,13 @@
     justify-content: flex-start;
     flex-wrap: wrap;
 
+}
+
+.contact_form{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: #ffcfab
 }
 
 
@@ -102,4 +109,15 @@
 
 .card_bottom{
     height: 6vw;
+}
+
+@media(max-width: 700px) {
+    .startups_A {
+        height: 300px;
+        /* margin-top: 60px; */
+    }
+
+    .startups_boxspacer {
+        height: 0px;
+    }
 }

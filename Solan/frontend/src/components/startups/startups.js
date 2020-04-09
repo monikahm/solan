@@ -9,31 +9,30 @@ function Startups() {
   return (
     <div className="startups-grid-container">
       <div className="startups_boxspacer"></div>
-
       <div className="startups_A">
-        <div className="startups_banner_image_text">
-          <h1>Startups</h1>
+        <p className="startups_banner_image_text">Startups</p>
+      </div>
+      {
+        startups.length !== 0 &&
+        <div className="startups_B">
+          {startups.map((s, index) => (
+            <div className="card" key={index + s}>
+              <div className="card_top">
+                <img className="startupImage" src={s.photo} alt={s.photo} />
+              </div>
+  
+              <div className="card_middle">
+                <div className="startupname">{s.name} </div>
+                <div className="startupinfo">{s.info} </div>
+              </div>
+  
+              <div className="card_bottom">
+                <button className="readmorebtn">Read More</button>
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
-
-      <div className="startups_B">
-        {startups.map((s, index) => (
-          <div className="card" key={index + s}>
-            <div className="card_top">
-              <img className="startupImage" src={s.photo} alt={s.photo} />
-            </div>
-
-            <div className="card_middle">
-              <div className="startupname">{s.name} </div>
-              <div className="startupinfo">{s.info} </div>
-            </div>
-
-            <div className="card_bottom">
-              <button className="readmorebtn">Read More</button>
-            </div>
-          </div>
-        ))}
-      </div>
+      }
     </div>
   )
 }

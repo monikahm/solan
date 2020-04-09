@@ -6,9 +6,9 @@ function Events() {
     <div className="events-home-grid">
       <div className="events_boxspacer"></div>
       <div className="events_A">
-        <div className="events_banner_image_text">
-          <h1>Arrangementer</h1>
-        </div>
+        <p className="events_banner_image_text">
+          Arrangementer
+        </p>
       </div>
 
       <div className="events_B"></div>

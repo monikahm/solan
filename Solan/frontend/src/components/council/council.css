@@ -5,36 +5,44 @@
             'council_A '
             'council_B';
     background-color: #FAF6F0;
-    padding-bottom: 10vw;
+    /* padding-bottom: 10vw; */
 
 }
 
 .council_boxspacer{
     grid-area: council_boxspacer;
-    height: 6vw;
+    height: 52px;
 }
 
 .council_A{
     grid-area: council_A;
+    display: flex;
     width: 100%;
-    height: 23vw;
+    height: 400px;
     color: white;
+    align-items: center;
+    justify-content: center;
     background:
             linear-gradient(
                     rgba(58,62,112),
                     rgba(55, 207, 171, 0)
             ),
             url(../../assets/images/bannerbilde3.PNG);
+    background-size: 100% 100%;   
 }
 
 .council_banner_image_text{
     color: #000;
     opacity: 0.71;
-    font-size: 5vw;
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.contact_form{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: #ffcfab
 }
 
 .council_B {
@@ -72,3 +80,13 @@
     font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 }
 
+@media(max-width: 700px) {
+    .council_A {
+        height: 300px;
+        /* margin-top: 60px; */
+    }
+
+    .council_boxspacer {
+        height: 0;
+    }
+}

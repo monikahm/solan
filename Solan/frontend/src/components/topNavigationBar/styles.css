@@ -1,0 +1,91 @@
+.Navbar {
+    grid-area: Navbar;
+    position: absolute;
+    background-color: #3A3E70;
+    overflow: hidden;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Nav_Links{
+    padding-right: 20px;
+}
+
+.Navbar a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 1.2vw 1.4vw;
+    margin-left: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    border-bottom: 1px solid #ffcfab;
+}
+
+.Navbar .logo {
+    margin-left: 20px;
+    height: 23px;
+    color: #ffcfab;
+    font-weight: bolder;
+}
+
+.menu-icon {
+    justify-content: center;
+    height: 64px;
+    align-items: center;
+    margin-left: -15px;
+    display: flex;
+    margin-top: -20px;
+    position: absolute;
+    background-color: #C8C8C8;
+    width: 52px;
+}
+
+.Navbar .smaller-menu {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    padding-left: 30px;
+    margin-top: 20px;
+}
+
+@media(max-width: 700px) {
+    .Navbar {
+        height: 65px;
+        position: relative;
+        flex-direction: column;
+    }
+
+    .Navbar a {
+        height: 40px;
+        text-align: start;
+    }
+    
+    .Navbar .logo {
+        cursor: pointer;
+        height: 20px;
+        min-height: 20px;
+        margin-left: 40px;
+        margin-top: -10px;
+    }
+
+    .Nav_Links {
+        width: 100%;
+        display: flex;
+        padding-right: 0;
+        justify-content: center;
+        height: 205px;
+        flex-direction: column;
+        background-color: #C8C8C8;
+    }
+
+    .Nav_Links * {
+        cursor: pointer;
+    }
+
+    .Nav_Links *:hover {
+        color: #f85f73
+    }
+}
