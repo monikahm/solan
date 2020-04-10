@@ -8,8 +8,12 @@ function EventCard(props) {
     return (
         <div className="each-event-card">
             <div className="event-upper-body">
-                <img src={eventIcon} />
-                <p className="event-heading"> {title} </p>
+                <img src={eventIcon} onClick={() => {
+                    window.open(signup_link, "_blank")
+                }} />
+                <p className="event-heading" onClick={() => {
+                    window.open(signup_link, "_blank")
+                }}> {title} </p>
                 <p className="event-body"> {content} </p>
             </div>
             <div className="info-panel">

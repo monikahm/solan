@@ -48,7 +48,6 @@
 
 .event-cards-container .each-event-card {
     position: relative;
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     width: 310px;
@@ -75,7 +74,12 @@
     text-align: center;
 }
 
+.event-upper-body img {
+    cursor: pointer;
+}
+
 .event-upper-body .event-heading {
+    cursor: pointer;
     font-size: 26px;
     font-weight: bolder;
     /* width: calc(100% - 30px); */
