@@ -38,17 +38,20 @@
     margin-left: -15px;
     display: flex;
     margin-top: -20px;
-    position: absolute;
+    /* position: absolute; */
     background-color: #C8C8C8;
     width: 52px;
+    margin-right: -12px;
 }
 
 .Navbar .smaller-menu {
     display: flex;
     /* align-items: center; */
     /* justify-content: center; */
-    padding-left: 30px;
+    /* padding-left: 30px; */
     margin-top: 20px;
+    justify-content: space-between;
+    width: calc(100% - 30px);
 }
 
 @media(max-width: 700px) {

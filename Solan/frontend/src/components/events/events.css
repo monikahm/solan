@@ -3,6 +3,7 @@
     grid-template-areas:
             'events_boxspacer events_boxspacer'
             'events_A events_A'
+            'event-cards-container event-cards-container'
             'events_B events_B'
             'events_C1 events_C2'
             'events_D1 events_D2'
@@ -31,10 +32,111 @@
     background-size: 100% 101%;   
 }
 
+.event-cards-container {
+    grid-area: event-cards-container;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    /* padding: 10px 30px 10px 30px; */
+    justify-content: center;
+    min-height: 70px;
+    background-color: #faf6f3;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.event-cards-container .each-event-card {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    margin-left: 30px;
+    margin-top: 20px;
+    min-height: 450px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    box-shadow: 2px 0 20px -1px rgba(82, 91, 115, 0.12);
+}
+
+.event-cards-container:first-child {
+    margin-left: 0;
+}
+
+.each-event-card .event-upper-body {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.event-upper-body .event-heading {
+    font-size: 26px;
+    font-weight: bolder;
+    /* width: calc(100% - 30px); */
+    padding: 0 10px 0 10px;
+    /* text-decoration: underline 5px; */
+    border-bottom: solid 4px #000;
+}
+
+.event-heading:hover {
+    border-bottom: solid 4px #3d43bc;;
+}
+
+.event-upper-body .event-body {
+    /* position: absolute; */
+    width: calc(100% - 30px);
+    text-align: center;
+    cursor: default;
+}
+
+.each-event-card .info-panel {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 20px);
+    height: 65px;
+    /* margin: auto; */
+}
+
+.info-panel .line-break {
+    width: 100%;
+    opacity: 0.5;
+}
+
+.info-panel .info-details {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.info-details p {
+    font-size: 13px;
+    margin: 0;
+    margin-top: 9px;
+    color: #3a3e70;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.info-details button {
+    align-self: center;
+    background-color: #ffcfab;
+    height: 25px;
+    width: 60px;
+    font-size: 13px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
 .events_banner_image_text{
     color: #000;
     opacity: 0.71;
-    font-size: 30px;
+    font-size: 8vw;
     font-weight: bold;
 }
 

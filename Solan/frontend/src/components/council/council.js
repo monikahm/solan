@@ -15,7 +15,7 @@ function Council() {
           Styremedlemmer
         </p>
       </div>
-      <ContactForm />
+      {/* <ContactForm /> */}
       {
         council.length !== 0 &&
         <div className="council_B">

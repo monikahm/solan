@@ -19,6 +19,7 @@ const App = () => {
       <TopNavigationBar />
       <Router>
         <React.Fragment>
+          <Homepage path="/">Homepage</Homepage>
           <Homepage path="homepage">Homepage</Homepage>
           <Startups path="startups">Startups</Startups>
           <Partners path="partners">Partners</Partners>

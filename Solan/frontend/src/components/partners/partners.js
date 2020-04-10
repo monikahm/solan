@@ -30,7 +30,7 @@ function Partners() {
         <img src={picture10} alt="arrow" className="arrow" />
       </div>
 
-      {/* <div className="partners_C2">
+      <div className="partners_C2">
         <h1>
           Workshop med studentene <br />
           på NTNUs Entreprenørskole
@@ -45,9 +45,9 @@ function Partners() {
           <br />
           gjennomført alt fra pitche-konkurranser til markedsundersøkelser.
         </p>
-      </div> */}
+      </div>
 
-      {/* <div className="partners_D1">
+      <div className="partners_D1">
         <h1>
           Synliggjøring og profilering <br />
           på vår nettside og
@@ -81,7 +81,7 @@ function Partners() {
           <br />
           gjennomført alt fra pitche-konkurranser til markedsundersøkelser.
         </p>{' '}
-      </div> */}
+      </div>
       <div className="contact_form_A1">
         <ContactForm />
       </div>
