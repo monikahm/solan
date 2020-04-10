@@ -39,7 +39,7 @@
     width: 100%;
     align-items: center;
     /* padding: 10px 30px 10px 30px; */
-    justify-content: center;
+    /* justify-content: center; */
     min-height: 70px;
     background-color: #faf6f3;
     padding-top: 50px;
@@ -188,5 +188,9 @@
 
     .events_boxspacer {
         height: 0px;
+    }
+
+    .event-cards-container { 
+        justify-content: center;
     }
 }
