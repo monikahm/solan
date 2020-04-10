@@ -75,6 +75,10 @@
 }
 
 .event-upper-body img {
+    height: 160px;
+    max-height: 160px;
+    width: 210px;
+    max-width: 210px;
     cursor: pointer;
 }
 
