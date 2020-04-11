@@ -1,0 +1,88 @@
+.partners-home-grid{
+    background-color: #faf6f3;
+    display: grid;
+    grid-template-areas:
+            'partners_boxspacer partners_boxspacer'
+            'partners_A partners_A'
+            'partners_B partners_B'
+            'partners_C1 partners_C2'
+            'partners_D1 partners_D2'
+            'partners_E1 partners_E2';
+}
+
+.partners_boxspacer{
+    grid-area: partners_boxspacer;
+    height: 6vw;
+}
+.partners_A{
+    grid-area: partners_A;
+    width: 100%;
+    height: 23vw;
+    color: white;
+    background:
+            linear-gradient(
+                    rgba(58,62,112),
+                    rgba(55, 207, 171, 0)
+            ),
+            url(../../assets/images/bannerbilde3.PNG);
+}
+
+.partners_banner_image_text{
+    color: #000;
+    opacity: 0.71;
+    font-size: 5vw;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.partners_B{
+    grid-area: partners_B;
+    text-align: center;
+}
+
+.partners_C1{
+    padding-top: 5vw;
+    grid-area: partners_C1;
+    padding-left: 20vw;
+
+}
+
+.partners_C2{
+    padding-right: 20vw;
+    padding-top: 5vw;
+    padding-bottom: 10vw;
+    grid-area: partners_C2;
+
+}
+
+.partners_D1{
+    text-align: center;
+    padding-top: 8vw;
+    grid-area: partners_D1;
+    padding-left: 20vw;
+
+}
+
+.partners_D2{
+    padding-top: 8vw;
+    grid-area: partners_D2;
+
+}
+
+.partners_E1{
+    padding-top: 5vw;
+    grid-area: partners_E1;
+    padding-left: 20vw;
+
+}
+
+.partners_E2{
+    padding-right: 10vw;
+    padding-top: 5vw;
+    grid-area: partners_E2;
+    padding-bottom: 10vw;
+
+}

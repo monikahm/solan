@@ -1,0 +1,93 @@
+.home-grid{
+    display: grid;
+    grid-template-areas:
+    'boxspacer boxspacer'
+    'A1 A2'
+    'B B'
+    'C1 C2'
+    'D1 D2'
+    'E1 E2';
+}
+
+.boxspacer{
+    grid-area: boxspacer;
+    background-color: #3A3E70;
+    height: 8vw;
+    width: 100%;
+}
+
+.A1{
+    padding-top: 5vw;
+    grid-area: A1;
+    align-content: baseline;
+    padding-left: 10vw;
+    text-weight: 700;
+    text-align: left;
+    height: 30vw;
+    color: #ffcfab;
+    font-weight: 700;
+    font-size: 2.5vw;
+    line-height: 4vw;
+    background-color: #3A3E70;
+}
+
+
+.A2{
+    padding-right: 15vw;
+    padding-top: 5vw;
+    grid-area: A2;
+    height: 30vw;
+    background-color: #3A3E70;
+}
+
+.B{
+    padding-left: 12vw;
+    padding-top: 2vw;
+    grid-area: B;
+    height: 6vw;
+    background-color: #ffcfab;
+}
+
+
+.C1{
+    grid-area: C1;
+    padding-top: 5vw;
+    height: 30vw;
+    background-color: #faf6f3;
+}
+
+.C2{
+    grid-area: C2;
+    padding-top: 5vw;
+    height: 30vw;
+    background-color: #faf6f3;
+    text-align: left;
+}
+
+.D1 {
+    grid-area: D1;
+    height: 30vw;
+    background-color: #faf6f3;
+}
+.D2{
+    grid-area: D2;
+    height: 30vw;
+    background-color: #faf6f3;
+}
+
+.E1{
+    padding-left: 10vw;
+    text-align: left;
+    grid-area: E1;
+    height: 30vw;
+    background-color: #faf6f3;
+    font-family: 'Gt walsheim pro', sans-serif;
+    font-weight: 500;
+}
+
+.E2{
+    grid-area: E2;
+    height: 30vw;
+    background-color: #faf6f3;
+}
+

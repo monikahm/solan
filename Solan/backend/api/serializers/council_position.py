@@ -4,4 +4,4 @@ from rest_framework.serializers import ModelSerializer
 class CouncilPositionSerializer(ModelSerializer):
     class Meta:
         model = CouncilPosition
-        fields = '__all__'
+        fields = ['name', 'position', 'info']

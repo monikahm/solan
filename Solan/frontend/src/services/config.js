@@ -1,1 +1,0 @@
-export const DATAPORTEN_CLIENT_ID = 'e6b79299-66c2-4bf2-a1b8-dc19d332c120';

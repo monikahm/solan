@@ -1,37 +1,28 @@
-
 {
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@reach/router": "^1.3.1",
-    "@testing-library/dom": "7.0.4",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
-    "eslint": "6.8.0",
-    "mdbreact": "^4.25.4",
-    "mkdirp": "^1.0.3",
     "prettier": "1.19.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-redux": "^7.2.0",
+    "react-instagram-embed": "^1.5.0",
     "react-scripts": "3.4.0",
-    "redux": "^4.0.5",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0",
-    "typescript": "3.4.3",
     "yarn": "^1.22.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\"",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix"
+    "start": "../../../node_modules/.bin/react-scripts start",
+    "build": "../../../node_modules/.bin/react-scripts build",
+    "test": "../../../node_modules/.bin/react-scripts test",
+    "eject": "../../../node_modules/.bin/react-scripts eject",
+    "format": "../../../node_modules/.bin/prettier --write \\\"**/*.+(js|jsx|json|css|md)\\\"",
+    "lint": "../../../node_modules/.bin/eslint .",
+    "lint:fix": "../../../node_modules/.bin/eslint --fix"
   },
   "eslintConfig": {
     "extends": "react-app"

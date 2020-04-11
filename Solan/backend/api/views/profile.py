@@ -6,7 +6,7 @@ from rest_framework.viewsets import mixins,GenericViewSet
 User = get_user_model()
 
 
-class ProfileView(GenericViewSet,mixins.DestroyModelMixin,mixins.UpdateModelMixin,mixins.RetrieveModelMixin):
+class ProfileView(GenericViewSet,mixins.DestroyModelMixin,mixins.UpdateModelMixin,mixins.RetrieveModelMixin, mixins.ListModelMixin):
 
     serializer_class = ProfileSerializer
     queryset = User.objects.all()

@@ -1,28 +1,36 @@
 import React, { useState } from 'react'
 import './startups.css'
 import useFetch from '../api'
-import picture from '../../assets/images/bruce-bannerbilde.png'
 
-function FetchStartups() {
+function Startups() {
   const [startups, setStartups] = useState([])
   useFetch('http://127.0.0.1:8000/api/startups/', setStartups)
 
   return (
-    <div className="body">
-      <div className="Header">
-        <img src={picture} alt="bannerpicture" className="banner-pic" />
+    <div className="startups-grid-container">
+      <div className="startups_boxspacer"></div>
+
+      <div className="startups_A">
+        <div className="startups_banner_image_text">
+          <h1>Startups</h1>
+        </div>
       </div>
 
-      <div className="contents">
+      <div className="startups_B">
         {startups.map((s, index) => (
-          <div className="Card" key={index + s}>
-            <img className="startupImage" src={s.photo} alt={s.photo}></img>
+          <div className="card" key={index + s}>
+            <div className="card_top">
+              <img className="startupImage" src={s.photo} alt={s.photo} />
+            </div>
 
-            <div className="startupname">{s.name} </div>
+            <div className="card_middle">
+              <div className="startupname">{s.name} </div>
+              <div className="startupinfo">{s.info} </div>
+            </div>
 
-            <div className="startupinfo">{s.info} </div>
-
-            <button className="readmorebtn">Read More</button>
+            <div className="card_bottom">
+              <button className="readmorebtn">Read More</button>
+            </div>
           </div>
         ))}
       </div>
@@ -30,4 +38,4 @@ function FetchStartups() {
   )
 }
 
-export default FetchStartups
+export default Startups
