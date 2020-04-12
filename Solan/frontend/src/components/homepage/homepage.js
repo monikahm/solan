@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './homepage.css'
 import picture from '../../assets/images/bigsolanlogo.PNG'
 import picture2 from '../../assets/images/solanpåpinne2.PNG'

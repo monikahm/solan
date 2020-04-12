@@ -8,7 +8,8 @@ import Register from './register'
 import { Router, Link } from '@reach/router'
 
 export default function Login() {
-  const { user, loggedIn } = useSelector((state) => state)
+  const { user, loggedIn, username } = useSelector((state) => state.authentication)
+  console.log("username:", username)
   const dispatch = useDispatch()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -20,7 +21,8 @@ export default function Login() {
         email,
         password
       )
-      dispatch({ type: 'setUser', user })
+      dispatch({ type: 'setUser', user: user })
+      dispatch({type: 'setUsername', username: email})
     } catch (ex) {
       console.log(ex)
     }
@@ -28,11 +30,12 @@ export default function Login() {
 
   return (
     <div className="login">
-      {loggedIn} {user}
+      {loggedIn} {user} {username}
       {loggedIn ? (
         <button
           onClick={() => {
             dispatch({ type: 'setUser', user: null })
+            dispatch({type: 'setUsername', username: null})
             logout()
           }}
         >

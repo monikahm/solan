@@ -3,10 +3,9 @@ import { useSelector } from 'react-redux'
 import { Router, Link } from '@reach/router'
 import { RegisterAPI } from '../../services/loginservices'
 import Login from './login'
-import userManager from '../../services/userRegister'
 
 export default function Register() {
-    const { user, loggedIn } = useSelector((state) => state)
+    const { loggedIn } = useSelector((state) => state.authentication)
     const [profile, setProfile] = useState({
         email: '',
         ntnu_username: '',
@@ -24,7 +23,7 @@ export default function Register() {
     async function handleSubmit(e) {
         e.preventDefault()
         try {
-            const reg = await RegisterAPI(profile);
+            await RegisterAPI(profile);
         } catch (ex) {
             console.log(ex)
         }

@@ -1,4 +1,4 @@
-const BACKEND_URL = 'http://127.0.0.1'
+import {BACKEND_URL} from '../constants'
 
 async function LoginAPI(username, password) {
   const options = {

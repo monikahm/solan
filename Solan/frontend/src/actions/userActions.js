@@ -33,6 +33,13 @@ function login(username, password) {
   }
 }
 
+export const setUsername = (email) => {
+  return {
+    type: 'setUsername',
+    username: email
+  }
+}
+
 function logout() {
   loginservices.logout()
   return { type: userConstants.LOGOUT }

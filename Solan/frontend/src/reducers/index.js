@@ -3,8 +3,8 @@ import { alert } from './alert.reducers'
 import { authentication } from './authentication.reducer'
 
 const appReducers = combineReducers({
-  alert: alert,
-  authentication: authentication
+  alert,
+  authentication
 })
 
 const rootReducer = (state, action) => {

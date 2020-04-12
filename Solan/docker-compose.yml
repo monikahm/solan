@@ -4,17 +4,19 @@ services:
      build: ./backend
      command: python manage.py runserver 0.0.0.0:8000
      volumes:
-       - /src
+       - ./backend:/src
      ports:
        - "8000:8000"
      container_name: backend
    frontend:
      build: ./frontend
      volumes:
-      - ./frontend:/frontend
+       - ./frontend:/frontend
      expose:
        - "3000"
      container_name: frontend
+     environment:
+       - REACT_APP_BACKEND_URL=http://localhost
    nginx-proxy:
      build: ./
      volumes:
@@ -22,4 +24,3 @@ services:
      ports:
        - "80:80"
      container_name: nginx-proxy
-     
