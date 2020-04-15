@@ -36,4 +36,4 @@ urlpatterns = [
     path('api/register', CreateUserView.as_view()),
     url(r'^study', study),
     url(r'^callback', study_callback),
-    ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
