@@ -19,6 +19,7 @@ async function LoginAPI(username, password) {
     new Date(Date.now() + 60 * 60 * 24 * 365 * 1000).toUTCString()
   console.log("asdasdasd")
   localStorage.setItem('token', result.token)
+  localStorage.setItem('id', result.id)
   return result.token
 }
 

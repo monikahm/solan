@@ -10,6 +10,7 @@ import Contact from './components/contact/contact'
 import picture4 from './assets/images/solanfooterlogo.PNG'
 import Login from './components/login/login'
 import Register from './components/login/register'
+import UserProfile from './components/userProfile/user-profile'
 import { useSelector, useDispatch } from 'react-redux'
 
 import { BACKEND_URL } from './constants'
@@ -51,6 +52,7 @@ const App = () => {
           <Link to="council">Styremedlemmer</Link>
           <Link to="partners">For Bedrifter</Link>
           <Link to="events">Arrangementer</Link>
+          <Link to="profile">Profil</Link>
         </div>
       </nav>
 
@@ -63,6 +65,7 @@ const App = () => {
         <Contact path="contact">Kontakt Oss</Contact>
         <Login path="login">Login</Login>
         <Register path="register">Register</Register>
+        <UserProfile path="profile">Profile</UserProfile>
       </Router>
 
       <div className="F">
