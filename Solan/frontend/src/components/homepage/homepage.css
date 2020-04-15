@@ -35,7 +35,7 @@
     align-items: center;
     /* padding: 10px 30px 10px 30px; */
     justify-content: space-between;
-    min-height: 70px;
+    min-height: 90px;
     background-color: #ffcfab;
 }
 
@@ -73,11 +73,6 @@
     .about-us .about-us-info {
         width: calc(100% - 30px);
     }
-
-    /* .main-container p {
-        font-size: 20px;
-    } */
-
     .main-container img {
         height: 150px;
     }

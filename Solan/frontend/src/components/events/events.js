@@ -15,19 +15,19 @@ function Events() {
           Arrangementer
         </p>
       </div>
-    {
-      eventsData.length > 0 &&
-      <div className="event-cards-container">
-        {
-          eventsData.map(item => {
-            if(item.signup_link && !(item.signup_link.includes('http'))) {
-              item.signup_link = `http://${item.signup_link}`
-            }
-            return <EventCard item={item} />
-          })
-        }
-      </div>
-    }
+      {
+        eventsData.length > 0 &&
+        <div className="event-cards-container">
+          {
+            eventsData.map(item => {
+              if (item.signup_link && !(item.signup_link.includes('http'))) {
+                item.signup_link = `http://${item.signup_link}`
+              }
+              return <EventCard item={item} />
+            })
+          }
+        </div>
+      }
     </div>
   )
 }

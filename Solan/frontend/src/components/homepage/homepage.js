@@ -2,7 +2,6 @@ import React from 'react';
 import './homepage.css'
 import picture from '../../assets/images/bigsolanlogo.PNG'
 import picture2 from '../../assets/images/solanpåpinne2.PNG'
-// import picture3 from '../../assets/images/partnerspicture.PNG'
 import { getAllPartners } from './assets';
 import ContactForm from '../contactForm/contactForm';
 
@@ -11,8 +10,6 @@ function Homepage() {
     const allPartners = getAllPartners();
     return (
         <div className="home-grid">
-            {/* <div className="boxspacer">
-            </div> */}
             <div className="main-container">
                 <p>Solan <br />
                     Linjeforening ved <br />
@@ -49,25 +46,6 @@ function Homepage() {
                 </div>
             </div>
             <ContactForm />
-
-            {/* <div className="D1">
-                <p>INSTAGRAM FEED</p>
-            </div>
-
-            <div className="D2">
-                <p>INSTAGRAM FEED</p>
-            </div>
-
-            <div className="E1">
-                <h1>Kontakt oss</h1>
-                <p>Send ditt spørsmål, så <br />
-                    skal vi prøve å svare <br />
-                    innen 2-3 dager</p>
-            </div>
-
-            <div className="E2">
-                <p>Form</p>
-            </div> */}
         </div>
     )
 }

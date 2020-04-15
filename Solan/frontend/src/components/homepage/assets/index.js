@@ -17,6 +17,5 @@ export function getAllPartners() {
     allPartners.push(partner6);
     allPartners.push(partner7);
     allPartners.push(partner8);
-    console.log(allPartners);
     return allPartners;
 }

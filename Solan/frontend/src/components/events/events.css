@@ -12,14 +12,15 @@
 
 .events_boxspacer{
     grid-area: events_boxspacer;
-    height: 52px;
+    height: 90px;
 }
 
 .events_A{
     grid-area: events_A;
     display: flex;
     width: 100%;
-    height: 400px;
+    height: 35vw;
+    height: 35vw;
     color: white;
     align-items: center;
     justify-content: center;
@@ -40,7 +41,7 @@
     align-items: center;
     /* padding: 10px 30px 10px 30px; */
     /* justify-content: center; */
-    min-height: 70px;
+    min-height: 90px;
     background-color: #faf6f3;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -122,13 +123,22 @@
     justify-content: space-between;
 }
 
-.info-details p {
+.info-details .date-time-div {
+    display: flex;
+    flex-direction: column;
     font-size: 13px;
-    margin: 0;
-    margin-top: 9px;
     color: #3a3e70;
     font-weight: bold;
     opacity: 0.5;
+}
+
+.date-time-div p {
+    margin: 0;
+    margin-top: 2px;
+}
+
+.date-time-div .time-value {
+    margin-left: 13px;
 }
 
 .info-details button {
@@ -148,49 +158,36 @@
     font-weight: bold;
 }
 
-
-
-.events_B{
-    grid-area: events_B;
-
-}
-
-
-.events_C1{
-
-}
-
-.events_C2{
-
-}
-
-.events_D1{
-
-}
-
-.events_D2{
-
-}
-
-.events_E1{
-
-}
-
-.events_E2{
-
-}
-
-@media(max-width: 700px) {
+@media(max-width: 980px) {
     .events_A {
         height: 300px;
-        /* margin-top: 60px; */
     }
 
     .events_boxspacer {
         height: 0px;
     }
+}
+
+@media(max-width: 700px) {
 
     .event-cards-container { 
         justify-content: center;
+        flex-direction: column;
+    }
+
+    .event-cards-container .each-event-card {
+        margin-left: 0px;
+    }
+}
+
+@media(max-width: 450px) {
+    .events_A {
+        height: 200px;
+    }
+}
+
+@media(max-width: 400px) {
+    .event-cards-container .each-event-card {
+        width: 230px;
     }
 }

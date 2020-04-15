@@ -45,3 +45,13 @@ export function getDateByString(date) {
     const formattedDate = `${day} ${getMonthByNumber(month)}, ${year}`;
     return formattedDate;
 }
+
+export function truncateTitle(title, max) {
+    let updatedTitle = title;
+    if(title) {
+        if(title.length > max) {
+            updatedTitle = title.substr(0, max) + '...';
+        }
+    }
+    return updatedTitle;
+}

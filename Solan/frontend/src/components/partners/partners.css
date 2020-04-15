@@ -5,21 +5,20 @@
             'partners_boxspacer partners_boxspacer'
             'partners_A partners_A'
             'partners_B partners_B'
-            'partners_C1 partners_C2'
-            'partners_D1 partners_D2'
-            'partners_E1 partners_E2'
+            'partners-container partners-container'
+            /* 'each-partner each-partner' */
             'contact_form_A1 contact_form_A1';
 }
 
 .partners_boxspacer{
     grid-area: partners_boxspacer;
-    height: 52px;
+    height: 90px;
 }
 .partners_A{
     grid-area: partners_A;
     display: flex;
     width: 100%;
-    height: 400px;
+    height: 35vw;
     color: white;
     align-items: center;
     justify-content: center;
@@ -44,6 +43,35 @@
     grid-area: partners_B;
     text-align: center;
 }
+
+.partners-container-panel {
+    grid-area: partners-container;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.each-partner {
+    /* grid-area: each-partner; */
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.each-partner img {
+    height: 350px;
+    width: 350px;
+}
+
+.each-partner .details {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
 
 .partners_C1{
     padding-top: 5vw;
@@ -100,13 +128,45 @@
     background-color: #ffcfab
 }
 
-@media(max-width: 700px) {
+@media(max-width: 980px) {
     .partners_A {
         height: 300px;
-        /* margin-top: 60px; */
     }
 
     .partners_boxspacer {
         height: 0px;
+    }
+}
+
+@media(max-width: 720px) {
+    .each-partner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .each-partner img {
+        height: 250px;
+        width: 250px;
+    }
+
+    .each-partner .details {
+        margin-left: 0;
+        width: calc(100% - 30px);
+        /* width: unset; */
+        margin-left: 15px;
+    }
+
+    .details h1 {
+        align-self: center;
+    }
+
+    .details p {
+        align-self: center;
+    }
+}
+
+@media(max-width: 450px) {
+    .partners_A {
+        height: 200px;
     }
 }

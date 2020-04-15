@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import useFetch from '../api'
-import ContactForm from '../contactForm/contactForm'
 import './council.css'
 
 function Council() {
@@ -15,7 +14,6 @@ function Council() {
           Styremedlemmer
         </p>
       </div>
-      {/* <ContactForm /> */}
       {
         council.length !== 0 &&
         <div className="council_B">
