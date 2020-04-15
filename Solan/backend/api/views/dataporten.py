@@ -1,4 +1,3 @@
-import os
 import json
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -57,7 +56,6 @@ def approve_member(user, groups):
         return True
     else:
         return False
-
 
 @login_required()
 def study(request):

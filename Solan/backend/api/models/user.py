@@ -10,7 +10,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     ntnu_username = models.CharField(max_length=100, unique=True)
-    council_position = models.ForeignKey(CouncilPosition, related_name='name', blank=True, null=True, on_delete=models.CASCADE)
     member = models.BooleanField(default=False)
     staff = models.BooleanField(default=False)
     admin = models.BooleanField(default=False)
