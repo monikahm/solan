@@ -15,8 +15,6 @@ services:
      expose:
        - "3000"
      container_name: frontend
-     environment:
-       - REACT_APP_BACKEND_URL=http://localhost
    nginx-proxy:
      build: ./
      volumes:

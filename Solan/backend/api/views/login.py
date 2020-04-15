@@ -15,7 +15,3 @@ class LoginView(APIView):
         django_login(request, user)
         token, created = Token.objects.get_or_create(user=user)
         return Response({"token": token.key, 'id': user.id}, status=200)
-
-class ValidateTokenView(APIView):
-    def post(self, request):
-        return Response({"valid": request.user.is_authenticated}, status=200)
