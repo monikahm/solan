@@ -9,9 +9,7 @@ async function LoginAPI(username, password) {
       password
     })
   }
-  const result = await fetch(BACKEND_URL + '/api/login', options).then((res) =>
-    res.json()
-  )
+  const result = await fetch('/api/login', options).then((res) => res.json())
   document.cookie =
     'csrftoken=' +
     result.token +

@@ -11,7 +11,10 @@ function UserProfile() {
     <div className="profile-grid-container">
       <div className="profile">
         <img className="profile-image" src={userdata.photo} alt="Profile Pic" />
-        <div className="profile-name">{userdata.first_name} {userdata.last_name} </div>
+        <div className="profile-name">
+          {' '}
+          {userdata.first_name} {userdata.last_name}{' '}
+        </div>
       </div>
     </div>
   )
