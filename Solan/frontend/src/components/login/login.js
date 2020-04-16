@@ -28,7 +28,7 @@ export default function Login() {
       console.log(ex)
     }
     await sleep(500)
-    window.open('/study', '_blank')
+    window.open('/study', '_self')
   }
 
   return (
