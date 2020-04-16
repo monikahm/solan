@@ -9,7 +9,7 @@ async function LoginAPI(username, password) {
       password
     })
   }
-  const result = await fetch('/api/login', options).then((res) => res.json())
+  const result = await fetch(BACKEND_URL + '/api/login', options).then((res) => res.json())
   document.cookie =
     'csrftoken=' +
     result.token +
@@ -33,7 +33,7 @@ async function RegisterAPI(profile) {
       last_name: profile.last_name
     })
   }
-  const result = await fetch(BACKEND_URL + '/study', options).then((res) => res.json())
+  const result = await fetch(BACKEND_URL + '/api/register', options).then((res) => res.json())
   console.log(profile)
   return result
 }
