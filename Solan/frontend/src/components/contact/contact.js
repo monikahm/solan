@@ -1,19 +1,20 @@
 import React from 'react'
 import './contact.css'
+import ContactForm from '../contactForm/contactForm'
 
 function Contact() {
   return (
-    <div className="contact-home-grid">
-      <div className="contact_boxspacer"></div>
-      <div className="contact_A">
-        <div className="contact_banner_image_text">
-          <h1>Kontakt Oss</h1>
+    <React.Fragment>
+      <div className="contact-home-grid">
+        <div className="contact_boxspacer"></div>
+        <div className="contact_A">
+          <p className="contact_banner_image_text">
+            Kontakt Oss
+            </p>
         </div>
       </div>
-
-      <div className="contact_B"></div>
-    </div>
+      <ContactForm />
+    </React.Fragment>
   )
 }
-
 export default Contact

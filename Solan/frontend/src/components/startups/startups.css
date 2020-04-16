@@ -5,60 +5,70 @@
             'startups_A '
             'startups_B';
     background-color: #FAF6F3;
-    padding-bottom: 10vw;
+    /* padding-bottom: 10vw; */
 
 }
 
 .startups_boxspacer{
     grid-area: startups_boxspacer;
-    height: 6vw;
+    height: 90px;
 }
 
 .startups_A{
-    grid-area: startups_A;
+    display: flex;
     width: 100%;
-    height: 23vw;
+    height: 35vw;
     color: white;
+    align-items: center;
+    justify-content: center;
     background:
             linear-gradient(
-                    rgb(58,62,112),
+                    rgba(58,62,112),
                     rgba(55, 207, 171, 0)
             ),
             url(../../assets/images/bannerbilde3.PNG);
+    background-size: 100% 101%; 
 }
 
 .startups_banner_image_text{
     color: #000;
     opacity: 0.71;
-    font-size: 5vw;
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-size: 8vw;
+    font-weight: bold;
 }
 
 .startups_B {
+
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
     grid-area: startups_B;
-    padding-top: 5vw;
-    padding-left: 15vw;
+    padding: 30px 0 30px 0;
     display: flex;
-    flex-direction: row;
-    width: 80vw;
+    width: calc(100% - 80px);
+    margin-left: 40px;
     justify-content: flex-start;
     flex-wrap: wrap;
+    /* background-color: #f4f7fc; */
 
+}
+
+.contact_form{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: #ffcfab
 }
 
 
 .card {
-    margin: 1vw;
-    background-color: #FBFAFF;
-    height: 24vw;
-    width: 16vw;
-    border-radius: 1.5vw;
     position: relative;
-    top: 0;
-    transition: top ease 0.1s;
+    margin: 1vw;
+    background-color: #fbfaff;
+    height: 400px;
+    height: 35vw;
+    flex-basis: 22%;
+    text-align: center;
+    border-radius: 13px;
+    transition: top ease 0.5s;
 }
 
 .card:hover{
@@ -66,8 +76,10 @@
 }
 
 .startupImage{
-    height: 10vw;
-    width: 16vw;
+    padding-top: 2px;
+    height: 100%;
+    width: calc(100% - 5px);
+    border-radius: 17px;
 }
 
 .readmorebtn {
@@ -80,26 +92,104 @@
 }
 
 .startupinfo{
-    padding-top: 1vw;
-    font-size: 0.8vw;
+    margin-top: 5px;
+    margin-left: 10px;
+    opacity: 0.7;
+    font-family: 'Open Sans', sans-serif;
+    color: #12152a;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    text-align: center;
 }
 
 .startupname{
-    font-size: 1.1vw;
+    font-family: 'Open Sans', sans-serif;
+    color: #2e3256;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
 }
 
 .card_top{
-    height: 8vw;
+    height: 45%;
 }
 
 .card_middle{
-    padding-top: 3vw;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    height: 8vw;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 150px;
     text-align: left;
 }
 
 .card_bottom{
-    height: 6vw;
+    /* height: 6vw; */
+    margin-left: 30px;
+    position: absolute;
+    height: 40px;
+    bottom: 10px;
+}
+
+.card_bottom button {
+    height: 35px;
+    width: 100px;
+    /* padding: 10px 20px; */
+    border-radius: 11px;
+    background-color: #fff;
+    box-shadow: 0 1px 14px 2px rgba(18, 15, 108, 0.06);
+    font-family: 'Open Sans', sans-serif;
+    color: #9c9cbc;
+    line-height: 19px;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+@media(max-width: 1115px) {
+    .card {
+        height: 400px;
+    }
+}
+
+@media(max-width: 980px) {
+    .startups_A {
+        height: 300px;
+        /* margin-top: 60px; */
+    }
+
+    .startups_boxspacer {
+        height: 0px;
+    }
+
+    .card {
+        flex-basis: unset;
+        width: 220px;
+    }
+
+    .card_bottom button {
+        height: 35px;
+        width: 100px;
+        border-radius: 11px;
+        background-color: #fff;
+        box-shadow: 0 1px 14px 2px rgba(18, 15, 108, 0.06);
+        font-family: 'Open Sans', sans-serif;
+        color: #9c9cbc;
+        line-height: 19px;
+        font-weight: 700;
+        font-size: 14px;
+    }
+}
+
+
+
+@media(max-width: 550px) {
+    .startups_B {
+        justify-content: center;
+    }
+}
+
+@media(max-width: 450px) {
+    .startups_A {
+        height: 200px;
+    }
 }

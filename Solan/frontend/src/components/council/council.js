@@ -9,22 +9,23 @@ function Council() {
   return (
     <div className="council-grid-container">
       <div className="council_boxspacer"></div>
-
       <div className="council_A">
-        <div className="council_banner_image_text">
-          <h1>Styremedlemmer</h1>
+        <p className="council_banner_image_text">
+          Styremedlemmer
+        </p>
+      </div>
+      {
+        council.length !== 0 &&
+        <div className="council_B">
+          {council.map((s, index) => (
+            <div className="councilcard" key={index + s}>
+              <img className="councilImage" src={s.photo} alt={s.photo} />
+              <div className="councilname">{s.name} </div>
+              <div className="councilposition">{s.position} </div>
+            </div>
+          ))}
         </div>
-      </div>
-
-      <div className="council_B">
-        {council.map((s, index) => (
-          <div className="councilcard" key={index + s}>
-            <img className="councilImage" src={s.photo} alt={s.photo} />
-            <div className="councilname">{s.name} </div>
-            <div className="councilposition">{s.position} </div>
-          </div>
-        ))}
-      </div>
+      }
     </div>
   )
 }

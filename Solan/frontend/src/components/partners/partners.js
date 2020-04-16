@@ -2,15 +2,16 @@ import React from 'react'
 import './partners.css'
 import picture10 from '../../assets/images/arrow.PNG'
 import picture11 from '../../assets/images/computer.PNG'
+import ContactForm from '../contactForm/contactForm'
 
 function Partners() {
   return (
     <div className="partners-home-grid">
       <div className="partners_boxspacer"></div>
       <div className="partners_A">
-        <div className="partners_banner_image_text">
-          <h1>Bedrifter</h1>
-        </div>
+        <p className="partners_banner_image_text">
+          Bedrifter
+        </p>
       </div>
 
       <div className="partners_B">
@@ -24,62 +25,67 @@ function Partners() {
           forslag.
         </p>
       </div>
+      <div className="partners-container-panel">
 
-      <div className="partners_C1">
-        <img src={picture10} alt="arrow" className="arrow" />
-      </div>
+        <div className="each-partner">
+          <img src={picture10} alt="arrow" className="arrow" />
 
-      <div className="partners_C2">
-        <h1>
-          Workshop med studentene <br />
-          på NTNUs Entreprenørskole
+          <div className="details">
+            <h1>
+              Workshop med studentene <br />
+              på NTNUs Entreprenørskole
         </h1>
-        <p>
-          {' '}
-          Vi kan sette av en dag der dere får komme og presenterederes bedrift
+            <p>
+              {' '}
+              Vi kan sette av en dag der dere får komme og presenterederes bedrift
           <br />
-          og vi kan undersøke spennende caser eller problemstillingersammen.
+              og vi kan undersøke spennende caser eller problemstillingersammen.
           <br />
-          Her finnes det mange spennende utforminger og det har tidligere blitt
+              Her finnes det mange spennende utforminger og det har tidligere blitt
           <br />
-          gjennomført alt fra pitche-konkurranser til markedsundersøkelser.
+              gjennomført alt fra pitche-konkurranser til markedsundersøkelser.
         </p>
-      </div>
+          </div>
+        </div>
 
-      <div className="partners_D1">
-        <h1>
-          Synliggjøring og profilering <br />
-          på vår nettside og
+        <div className="each-partner">
+          <img src={picture11} alt="computer" className="computer" />
+          <div className="details">
+            <h1>
+              Synliggjøring og profilering <br />
+              på vår nettside og
           <br /> sosialemedier
         </h1>
-        <p>
-          Våre samarbeidspartnere vil bli frontet på denne nettsiden og
+            <p>
+              Våre samarbeidspartnere vil bli frontet på denne nettsiden og
           <br /> kan i tillegg promoteres gjennom våre kanaler i sosiale medier.
         </p>
-      </div>
-      <div className="partners_D2">
-        <img src={picture11} alt="computer" className="computer" />
-      </div>
+          </div>
+        </div>
 
-      <div className="partners_E1">
-        <img src={picture10} alt="arrow" className="arrow" />
-      </div>
-
-      <div className="partners_E2">
-        <h1>
-          Workshop med studentene <br />
-          på NTNUs Entreprenørskole
+        <div className="each-partner">
+          <img src={picture10} alt="arrow" className="arrow" />
+          <div className="details">
+            <h1>
+              Workshop med studentene <br />
+              på NTNUs Entreprenørskole
         </h1>
-        <p>
-          {' '}
-          Vi kan sette av en dag der dere får komme og presenterederes bedrift
+            <p>
+              {' '}
+              Vi kan sette av en dag der dere får komme og presenterederes bedrift
           <br />
-          og vi kan undersøke spennende caser eller problemstillingersammen.
+              og vi kan undersøke spennende caser eller problemstillingersammen.
           <br />
-          Her finnes det mange spennende utforminger og det har tidligere blitt
+              Her finnes det mange spennende utforminger og det har tidligere blitt
           <br />
-          gjennomført alt fra pitche-konkurranser til markedsundersøkelser.
+              gjennomført alt fra pitche-konkurranser til markedsundersøkelser.
         </p>{' '}
+          </div>
+        </div>
+      </div>
+
+      <div className="contact_form_A1">
+        <ContactForm />
       </div>
     </div>
   )

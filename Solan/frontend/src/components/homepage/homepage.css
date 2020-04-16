@@ -1,93 +1,79 @@
-.home-grid{
-    display: grid;
-    grid-template-areas:
-    'boxspacer boxspacer'
-    'A1 A2'
-    'B B'
-    'C1 C2'
-    'D1 D2'
-    'E1 E2';
-}
 
-.boxspacer{
-    grid-area: boxspacer;
-    background-color: #3A3E70;
-    height: 8vw;
+.home-grid {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     width: 100%;
 }
 
-.A1{
-    padding-top: 5vw;
-    grid-area: A1;
-    align-content: baseline;
-    padding-left: 10vw;
-    text-weight: 700;
-    text-align: left;
-    height: 30vw;
+.home-grid .main-container {
+    display: flex;
+    width: 100%;
+    min-height: 330px;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #3A3E70;
     color: #ffcfab;
-    font-weight: 700;
-    font-size: 2.5vw;
-    line-height: 4vw;
-    background-color: #3A3E70;
 }
 
-
-.A2{
-    padding-right: 15vw;
-    padding-top: 5vw;
-    grid-area: A2;
-    height: 30vw;
-    background-color: #3A3E70;
+.main-container p {
+    /* font-size: 26px; */
+    font-size: 5vw;
+    margin: 0;
 }
 
-.B{
-    padding-left: 12vw;
-    padding-top: 2vw;
-    grid-area: B;
-    height: 6vw;
+.main-container img {
+    height: 200px;
+    margin-left: 50px;
+}
+
+.home-grid .partners-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    /* padding: 10px 30px 10px 30px; */
+    justify-content: space-between;
+    min-height: 90px;
     background-color: #ffcfab;
 }
 
-
-.C1{
-    grid-area: C1;
-    padding-top: 5vw;
-    height: 30vw;
-    background-color: #faf6f3;
+.partners-container img {
+    height: 50px;
+    width: 100px;
 }
 
-.C2{
-    grid-area: C2;
-    padding-top: 5vw;
-    height: 30vw;
+.home-grid .about-us {
+    display: flex;
+    height: auto;
+    width: 100%;
+    min-height: 450px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    align-items: center;
     background-color: #faf6f3;
-    text-align: left;
+    justify-content: center;
 }
 
-.D1 {
-    grid-area: D1;
-    height: 30vw;
-    background-color: #faf6f3;
+.about-us img {
+    height: 300px;
 }
-.D2{
-    grid-area: D2;
-    height: 30vw;
-    background-color: #faf6f3;
-}
+@media(max-width: 700px) {
+    .home-grid .main-container {
+        height: 230px;
+        margin-top: -2px;
+        flex-direction: column;
+    }
 
-.E1{
-    padding-left: 10vw;
-    text-align: left;
-    grid-area: E1;
-    height: 30vw;
-    background-color: #faf6f3;
-    font-family: 'Gt walsheim pro', sans-serif;
-    font-weight: 500;
-}
+    .home-grid .about-us {
+        flex-direction: column;
+    }
 
-.E2{
-    grid-area: E2;
-    height: 30vw;
-    background-color: #faf6f3;
+    .about-us .about-us-info {
+        width: calc(100% - 30px);
+    }
+    .main-container img {
+        height: 150px;
+    }
 }
-

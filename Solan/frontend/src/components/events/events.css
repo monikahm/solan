@@ -3,6 +3,7 @@
     grid-template-areas:
             'events_boxspacer events_boxspacer'
             'events_A events_A'
+            'event-cards-container event-cards-container'
             'events_B events_B'
             'events_C1 events_C2'
             'events_D1 events_D2'
@@ -11,62 +12,182 @@
 
 .events_boxspacer{
     grid-area: events_boxspacer;
-    height: 6vw;
+    height: 90px;
 }
 
 .events_A{
     grid-area: events_A;
+    display: flex;
     width: 100%;
-    height: 23vw;
+    height: 35vw;
+    height: 35vw;
     color: white;
+    align-items: center;
+    justify-content: center;
     background:
             linear-gradient(
                     rgba(58,62,112),
                     rgba(55, 207, 171, 0)
             ),
             url(../../assets/images/bannerbilde3.PNG);
+    background-size: 100% 101%;   
+}
+
+.event-cards-container {
+    grid-area: event-cards-container;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    /* padding: 10px 30px 10px 30px; */
+    /* justify-content: center; */
+    min-height: 90px;
+    background-color: #faf6f3;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.event-cards-container .each-event-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    margin-left: 30px;
+    margin-top: 20px;
+    min-height: 450px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    box-shadow: 2px 0 20px -1px rgba(82, 91, 115, 0.12);
+}
+
+.event-cards-container:first-child {
+    margin-left: 0;
+}
+
+.each-event-card .event-upper-body {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.event-upper-body img {
+    height: 160px;
+    max-height: 160px;
+    width: 210px;
+    max-width: 210px;
+    cursor: pointer;
+}
+
+.event-upper-body .event-heading {
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: bolder;
+    /* width: calc(100% - 30px); */
+    padding: 0 10px 0 10px;
+    /* text-decoration: underline 5px; */
+    border-bottom: solid 4px #000;
+}
+
+.event-heading:hover {
+    border-bottom: solid 4px #3d43bc;;
+}
+
+.event-upper-body .event-body {
+    /* position: absolute; */
+    width: calc(100% - 30px);
+    text-align: center;
+    cursor: default;
+}
+
+.each-event-card .info-panel {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 20px);
+    height: 65px;
+    /* margin: auto; */
+}
+
+.info-panel .line-break {
+    width: 100%;
+    opacity: 0.5;
+}
+
+.info-panel .info-details {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.info-details .date-time-div {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    color: #3a3e70;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.date-time-div p {
+    margin: 0;
+    margin-top: 2px;
+}
+
+.date-time-div .time-value {
+    margin-left: 13px;
+}
+
+.info-details button {
+    align-self: center;
+    background-color: #ffcfab;
+    height: 25px;
+    width: 60px;
+    font-size: 13px;
+    margin-top: 5px;
+    cursor: pointer;
 }
 
 .events_banner_image_text{
     color: #000;
     opacity: 0.71;
-    font-size: 5vw;
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-size: 8vw;
+    font-weight: bold;
 }
 
+@media(max-width: 980px) {
+    .events_A {
+        height: 300px;
+    }
 
-
-.events_B{
-    grid-area: events_B;
-
+    .events_boxspacer {
+        height: 0px;
+    }
 }
 
+@media(max-width: 700px) {
 
-.events_C1{
+    .event-cards-container { 
+        justify-content: center;
+        flex-direction: column;
+    }
 
+    .event-cards-container .each-event-card {
+        margin-left: 0px;
+    }
 }
 
-.events_C2{
-
+@media(max-width: 450px) {
+    .events_A {
+        height: 200px;
+    }
 }
 
-.events_D1{
-
+@media(max-width: 400px) {
+    .event-cards-container .each-event-card {
+        width: 230px;
+    }
 }
-
-.events_D2{
-
-}
-
-.events_E1{
-
-}
-
-.events_E2{
-
-}
-
-
