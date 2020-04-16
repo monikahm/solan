@@ -71,7 +71,7 @@ function TopNavigationBar() {
                         <a href="http://esaf.no/" target="_blank"> ESAF </a>
                         {
                             !loggedIn &&
-                            <a hre="#" className="login-button"> Logg inn </a>
+                            <a href="/login" className="login-button"> Logg inn </a>
                         }
                     </div>
                 </nav>
