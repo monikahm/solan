@@ -7,10 +7,10 @@ const TwitterIcon = require('./assets/twitter-icon.png');
 const InstagramIcon = require('./assets/instagram-icon.png');
 
 function BottomPanel() {
-    return (
-        <React.Fragment>
-            <div className="F">
-                <div>
+  return (
+    <React.Fragment>
+      <div className="F">
+        <div>
                     <img
                         src={picture4}
                         alt="solanfooterlogo"
@@ -18,8 +18,8 @@ function BottomPanel() {
                         height="230px"
                     />
                 </div>
-                <div className="footer_links">
-                    <Link to="/">Hjem</Link>
+        <div className="footer_links">
+          <Link to="/homepage">Hjem</Link>
                     <Link to="contact">Kontakt oss</Link>
                     <Link to="council">Styremedlemmer</Link>
                 </div>

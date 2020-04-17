@@ -69,9 +69,6 @@
     transition: top ease 0.5s;
 }
 
-.councilcard:hover {
-    margin-top: -20px;
-}
 
 .councilImage{
     height: calc(100% - 80px);

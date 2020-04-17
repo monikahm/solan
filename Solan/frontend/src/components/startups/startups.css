@@ -58,7 +58,7 @@
 .card {
     position: relative;
     margin: 1vw;
-    background-color: #fbfaff;
+    background-color: #FAF6F3;
     height: 16vw;
     flex-basis: 22%;
     text-align: center;
@@ -71,9 +71,9 @@
 }
 
 .startupImage{
+    max-height: 60%;
+    max-width: calc(60% - 5px);
     padding-top: 2px;
-    height: 100%;
-    width: calc(100% - 5px);
     border-radius: 17px;
 }
 

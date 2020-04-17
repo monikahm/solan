@@ -27,7 +27,9 @@ function Startups() {
           {startups.map((s, index) => (
             <div className="card" key={index + s}>
               <div className="card_top">
-                <img className="startupImage" src={s.photo} alt={s.photo} />
+                  <img className="startupImage" src={s.photo} alt={s.photo} onClick={()=>{
+                    window.open(s.url, '_blank')
+                  }}/>
               </div>
 
               <div className="card_middle">

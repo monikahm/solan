@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from '@reach/router'
 import './styles.css'
 import { topNavigationTabs } from '../utils/utils';
+import logo from "../../assets/images/bigsolanlogo.PNG";
 const MenuIcon = require('./menuIcon.svg');
 
 function TopNavigationBar() {
@@ -54,7 +55,12 @@ function TopNavigationBar() {
                 // <div style={{ height: 50, width: '100%', backgroundColor: 'red' }}>
                 // </div>
                 <nav className="Navbar">
-                    <a href="homepage" className="logo"> Solan </a>
+                    <a href="homepage" className="logo"> <img
+                        src={logo}
+                        alt="solanfooterlogo"
+                        className="solanfooterlogo"
+                        height="60px"
+                    /> </a>
                     <div className="Nav_Links">
                         {
                             topNavigationTabs.map((item, index) => {
@@ -70,8 +76,9 @@ function TopNavigationBar() {
                         <Link to="events">Arrangementer</Link> */}
                         <a href="http://esaf.no/" target="_blank"> ESAF </a>
                         {
-                            !loggedIn &&
+                            !localStorage.getItem('token') ? (
                             <a href="/login" className="login-button"> Logg inn </a>
+                            ) : (<a href="/login" className="login-button"> Log out </a>)
                         }
                     </div>
                 </nav>
@@ -105,7 +112,7 @@ function TopNavigationBar() {
                                 <a href="http://esaf.no/" target="_blank"> ESAF </a>
                                 {
                                     !loggedIn &&
-                                    <a hre="#" className="login-button"> Logg inn </a>
+                                    <a href="/login" className="login-button"> Logg inn </a>
                                 }
                             </div>
                         </div>

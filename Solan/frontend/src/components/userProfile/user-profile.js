@@ -9,11 +9,14 @@ function UserProfile() {
   console.log(userdata)
   return (
     <div className="profile-grid-container">
-      <div className="profile">
+      <div className="profile_boxspacer">
         <img className="profile-image" src={userdata.photo} alt="Profile Pic" />
         <div className="profile-name">
           {' '}
           {userdata.first_name} {userdata.last_name}{' '}
+        </div>
+        <div className="profile-email">
+          {userdata.email}
         </div>
       </div>
     </div>
