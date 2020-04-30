@@ -1,0 +1,77 @@
+.row {
+    display: -ms-flexbox; /* IE 10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE 10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+.column {
+  float: left;
+  width: 19.5%;
+  margin-left:5px;
+  margin-bottom: 5px;
+  height: 25vw; /* Should be removed. Only for demonstration */
+  overflow: hidden;
+}
+.column img {
+  height: 100%;
+  width: 100%;
+}
+
+.insta-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top:30px;
+}
+.insta {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  text-align: center;
+}
+.insta-icon {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  background-color: #3a3e70;
+}
+.insta-title {
+  line-height: 40px;
+  font-size: 28px;
+  margin: 0;
+  color: #3a3e70;
+}
+.seemore-btn {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  vertical-align: top;
+  zoom: 1;
+  padding: 7px 14px;
+  margin: 10px auto 0 auto;
+  background: #333;
+  color: #eee;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.5;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.seemore-btn:hover {
+  background:#666666b8;
+}
+
+.instamedia-thumb:hover {
+  opacity: .95;
+}
