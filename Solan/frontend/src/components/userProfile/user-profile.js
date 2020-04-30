@@ -1,19 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
+import useFetch from '../api'
+import './user-profile.css'
 
 function UserProfile() {
-  const info = ['Gunnar', 'Mike@solan.com', 'Member', '100KR']
-
+  const [userdata, setUserdata] = useState({})
+  const id = parseInt(localStorage.getItem('id'))
+  useFetch('http://127.0.0.1:8000/api/profiles/' + id + '/', setUserdata)
+  console.log(userdata)
   return (
-    <div>
-      <ul>
-        {info.map((i, index) => (
-          <li key={index}>
-            <a href={index}>{i}</a>
-          </li>
-        ))}
-      </ul>
+    <div className="profile-grid-container">
+      <div className="profile_boxspacer">
+        <img className="profile-image" src={userdata.photo} alt="Profile Pic" />
+        <div className="profile-name">
+          {' '}
+          {userdata.first_name} {userdata.last_name}{' '}
+        </div>
+        <div className="profile-email">
+          {userdata.email}
+        </div>
+      </div>
     </div>
   )
 }
 
-export default UserProfile
+export default UserProfile;
+

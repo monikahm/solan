@@ -71,7 +71,7 @@ function ContactForm() {
                     />
                     <p className="justify-content-center margin-top"> MELDING </p>
                     <textarea
-                        placeholder="Din spørsmål"
+                        placeholder="Ditt spørsmål"
                         className="text-fields"
                         value={messageValue}
                         onChange={(e) => {

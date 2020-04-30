@@ -8,6 +8,8 @@ import Homepage from './components/homepage/homepage'
 import Events from './components/events/events'
 import Contact from './components/contact/contact'
 import Login from './components/login/login'
+import Register from './components/login/register'
+import UserProfile from './components/userProfile/user-profile'
 import TopNavigationBar from './components/topNavigationBar/topNavigationBar'
 import BottomPanel from './components/bottomContactAndFooter/bottomPanel'
 
@@ -24,9 +26,11 @@ const App = () => {
           <Startups path="startups">Startups</Startups>
           <Partners path="partners">Partners</Partners>
           <Council path="council">Council</Council>
-          <Events path="events">Council</Events>
+          <Events path="events">Events</Events>
           <Contact path="contact">Kontakt Oss</Contact>
           <Login path="login">Login</Login>
+            <Register path="register">Register</Register>
+            <UserProfile path="profile">Profile</UserProfile>
         </React.Fragment>
       </Router>
       <footer>

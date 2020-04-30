@@ -4,7 +4,7 @@ import useFetch from '../api';
 import EventCard from './eachEventCard';
 
 function Events() {
-  const [eventsData, setEventsData] = useState([]);
+  const [eventsData, setEventsData] = useState([])
   useFetch('http://127.0.0.1:8000/api/event/', setEventsData)
 
   return (
