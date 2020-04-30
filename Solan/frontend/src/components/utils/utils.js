@@ -10,11 +10,7 @@ const topNavigationTabs = [
     {
         to: "partners",
         label: "For Bedrifter"
-    },
-    {
-        to: "events",
-        label: "Arrangementer"
-    },
+    }
 ]
 
 export {

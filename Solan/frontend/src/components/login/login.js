@@ -8,7 +8,9 @@ import Register from './register'
 import { Router, Link } from '@reach/router'
 
 export default function Login() {
-  const { user, loggedIn, username } = useSelector((state) => state.authentication)
+  const { user, loggedIn, username } = useSelector(
+    (state) => state.authentication
+  )
   console.log('username:', username)
   const dispatch = useDispatch()
   const [email, setEmail] = useState('')
@@ -28,7 +30,9 @@ export default function Login() {
       console.log(ex)
     }
     await sleep(500)
-    window.open('/study', '_self')
+    if (localStorage.getItem('token')) {
+      window.open('/study', '_self')
+    }
   }
 
   return (
@@ -41,6 +45,7 @@ export default function Login() {
               dispatch({ type: 'setUser', user: null })
               dispatch({ type: 'setUsername', username: null })
               logout()
+              window.open('/', '_self')
             }}
           >
             Logout

@@ -12,6 +12,7 @@ import Register from './components/login/register'
 import UserProfile from './components/userProfile/user-profile'
 import TopNavigationBar from './components/topNavigationBar/topNavigationBar'
 import BottomPanel from './components/bottomContactAndFooter/bottomPanel'
+import ProfileEdit from './components/userProfile/user-profile-edit'
 
 // let Home = () => <div></div>
 
@@ -29,8 +30,9 @@ const App = () => {
           <Events path="events">Events</Events>
           <Contact path="contact">Kontakt Oss</Contact>
           <Login path="login">Login</Login>
-            <Register path="register">Register</Register>
-            <UserProfile path="profile">Profile</UserProfile>
+          <Register path="register">Register</Register>
+          <UserProfile path="profile">Profile</UserProfile>
+            <ProfileEdit path="profile/edit">Profile Edit</ProfileEdit>
         </React.Fragment>
       </Router>
       <footer>
