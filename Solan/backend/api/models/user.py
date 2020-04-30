@@ -9,6 +9,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
+    bio = models.TextField(max_length=400, blank=True)
     ntnu_username = models.CharField(max_length=100, unique=True)
     member = models.BooleanField(default=False)
     staff = models.BooleanField(default=False)

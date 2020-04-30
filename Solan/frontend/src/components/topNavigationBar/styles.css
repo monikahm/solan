@@ -38,6 +38,26 @@
     text-align: left;
 }
 
+.logout-button{
+    border-radius: 30px;
+    height: 60px;
+    margin-left: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    flex: 0 0 auto;
+    font-family: 'Gt walsheim pro', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+    background-color: #ffcfab;
+    color: #f85f73;
+    border-width: 0;
+}
+
+.logout-button:hover{
+    background-color: white;
+}
+
 .login-button:hover {
     background-color: white;
 }
