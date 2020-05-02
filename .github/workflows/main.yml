@@ -26,6 +26,7 @@ jobs:
     - name: Backend-tests
       run: | 
           cd /Solan/backend
+          ls
           python manage.py makemigrations
           python manage.py migrate
           python manage.py test
@@ -34,6 +35,7 @@ jobs:
     - name: Frontend-tests
       run: |
         cd /Solan/frontend
+        ls
         npm install
         npm test
         a
