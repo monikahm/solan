@@ -43,5 +43,5 @@ jobs:
       run: |
         cd Solan/frontend
         npm install
-        npm test
+        npm test -- --coverage --updateSnapshot
         a
