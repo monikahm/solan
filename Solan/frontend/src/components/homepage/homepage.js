@@ -74,7 +74,7 @@ function Homepage() {
         </div>
       </div>
 
-      {/* INSTAGRAM FEED */}
+      {/* INSTAGRAM FEED
       <div className="D">
         <div class="insta-wrapper">
           <div class="insta">
@@ -90,7 +90,7 @@ function Homepage() {
         <Instafeed />
         <br />
       </div>
-
+*/}
       <ContactForm />
     </div>
   )
