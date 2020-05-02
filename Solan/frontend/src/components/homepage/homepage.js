@@ -1,12 +1,11 @@
 import React from 'react'
 import './homepage.css'
-//import './instafeed/instafeed.css'
-//import Instafeed from './instafeed/instafeed'
+import './instafeed/instafeed.css'
+import Instafeed from './instafeed/instafeed'
 import picture from '../../assets/images/bigsolanlogo.PNG'
 import picture2 from '../../assets/images/solanpåpinne2.PNG'
 import { getAllPartners } from './assets'
 import ContactForm from '../contactForm/contactForm'
-// import ContactForm from '../contactForm/contactForm';
 
 function Homepage() {
   const allPartners = getAllPartners()
@@ -74,7 +73,6 @@ function Homepage() {
         </div>
       </div>
 
-      {/*
       <div className="D">
         <div class="insta-wrapper">
           <div class="insta">
@@ -89,7 +87,7 @@ function Homepage() {
         <br />
         <Instafeed />
         <br />
-      </div>*/}
+      </div>
       <div>
         <ContactForm />
       </div>

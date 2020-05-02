@@ -6,7 +6,7 @@ import logo from '../../assets/images/bigsolanlogo.PNG'
 import CheckProfile from '../utils/checkAuthProfile'
 import CheckEvents from "../utils/checkAuthEvents";
 import { logout } from '../../services/loginservices'
-import { useDispatch, Provider } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 const MenuIcon = require('./menuIcon.svg')
 
