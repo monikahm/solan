@@ -74,11 +74,11 @@ function TopNavigationBar() {
             {topNavigationTabs.map((item, index) => {
               const eachLink =
                 index === currentTab ? (
-                  <Link style={{ color: '#f85f73' }} to={item.to}>
+                  <Link style={{ color: '#f85f73' }} to={item.to} key={index}>
                     {item.label}
                   </Link>
                 ) : (
-                  <Link to={item.to} onClick={onLinkClick}>
+                  <Link to={item.to} onClick={onLinkClick} key={index}>
                     {item.label}
                   </Link>
                 )
@@ -145,6 +145,7 @@ function TopNavigationBar() {
                   const eachLink =
                     index === currentTab ? (
                       <Link
+                        key={index}
                         style={{ color: '#f85f73' }}
                         to={item.to}
                         onClick={handleMenuOptionClick}
@@ -152,7 +153,7 @@ function TopNavigationBar() {
                         {item.label}
                       </Link>
                     ) : (
-                      <Link to={item.to} onClick={handleMenuOptionClick}>
+                      <Link to={item.to} onClick={handleMenuOptionClick} key={index}>
                         {item.label}
                       </Link>
                     )
