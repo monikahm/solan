@@ -25,7 +25,7 @@ jobs:
     # Runs a single command using the runners shell
     - name: Backend-tests
       run: | 
-          cd /Solan/backend
+          cd Solan/backend
           ls
           python manage.py makemigrations
           python manage.py migrate
@@ -34,7 +34,7 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Frontend-tests
       run: |
-        cd /Solan/frontend
+        cd Solan/frontend
         ls
         npm install
         npm test
