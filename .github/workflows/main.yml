@@ -33,7 +33,7 @@ jobs:
           cd Solan/backend
           sudo -H pip3 install --upgrade pip
           pip3 --version
-          pip install Django djangorestframework Pillow django-cors-headers requests
+          pip install Django djangorestframework Pillow django-cors-headers requests oic
           python manage.py makemigrations
           python manage.py migrate
           python manage.py test
