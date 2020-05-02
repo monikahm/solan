@@ -29,9 +29,9 @@ jobs:
           sudo -H pip3 install --upgrade pip
           pip3 --version
           pip install Django djangorestframework Pillow django-cors-headers requests
-          python manage.py makemigrations
-          python manage.py migrate
-          python manage.py test
+          py manage.py makemigrations
+          py manage.py migrate
+          py manage.py test
 
     # Runs a set of commands using the runners shell
     - name: Frontend-tests
