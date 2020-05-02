@@ -28,7 +28,7 @@ jobs:
           cd Solan/backend
           sudo -H pip3 install --upgrade pip
           pip3 --version
-          pip install -r requirements.txt
+          pip install Django djangorestframework Pillow django-cors-headers requests
           python manage.py makemigrations
           python manage.py migrate
           python manage.py test
