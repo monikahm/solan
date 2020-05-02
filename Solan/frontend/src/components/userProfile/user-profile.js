@@ -16,7 +16,7 @@ function UserProfile() {
     <div className="profile-grid-container">
       <div className="profile_boxspacer">
         <div className="profile-image">
-          <img alt="Profile Picture" src={profileImage} style={{ width: '10%' }} />
+          <img alt="Profile Pic" src={profileImage} style={{ width: '10%' }} />
         </div>
         <div className="profile-name">
           {'Navn: '}

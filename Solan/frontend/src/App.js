@@ -14,8 +14,6 @@ import TopNavigationBar from './components/topNavigationBar/topNavigationBar'
 import BottomPanel from './components/bottomContactAndFooter/bottomPanel'
 import ProfileEdit from './components/userProfile/user-profile-edit'
 
-// let Home = () => <div></div>
-
 const App = () => {
   return (
     <div className="App-grid">
