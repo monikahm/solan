@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './startups.css'
 import useFetch from '../api'
-import { truncateTitle } from '../utils/application.utils'
 
 function Startups() {
   const [currentWidth, handleWidthChange] = useState(window.innerWidth)

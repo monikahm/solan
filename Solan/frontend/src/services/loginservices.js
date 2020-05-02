@@ -51,7 +51,7 @@ async function logoutAPI(){
 async function logout() {
   try {
     localStorage.clear()
-    const usr = await logoutAPI()
+    await logoutAPI()
     delete_cookie("csrftoken")
     delete_cookie("sessionid")  
   }

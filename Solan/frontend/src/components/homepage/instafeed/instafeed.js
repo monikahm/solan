@@ -49,7 +49,7 @@ class Instafeed extends Component {
         <div>
           <div className="List">
             {this.state.media_data.slice(0, this.state.visible).map((el, i) => (
-              <div className="column">
+              <div className="column" key={i}>
                 <a href={this.state.media_data[i].permalink} target="_blank">
 
                   {/* Check whether the feed is video or image and populate the relevant code according to the mdeia type */}
@@ -70,7 +70,7 @@ class Instafeed extends Component {
 
           {/* Load more button conditioned  */}
           {this.state.visible < this.state.media_data.length && (
-            <button onClick={this.loadmore} class="seemore-btn">
+            <button onClick={this.loadmore} className="seemore-btn">
               Load More...
             </button>
           )}

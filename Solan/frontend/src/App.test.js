@@ -1,9 +1,28 @@
 import React from 'react'
-import { render } from '@testing-library/react'
-import App from './App'
+import renderer from 'react-test-renderer'
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />)
-  const linkElement = getByText(/learn react/i)
-  expect(linkElement).toBeInTheDocument()
+import ProfileEdit from './components/userProfile/user-profile-edit'
+import ContactForm from './components/contactForm/contactForm'
+import UserProfile from './components/userProfile/user-profile'
+import Startups from './components/startups/startups'
+
+it('render contact form correctly', () => {
+  const tree = renderer.create(<ContactForm/>).toJSON();
+  expect(tree).toMatchSnapshot();
 })
+
+it('render user profile correctly', () => {
+  const tree = renderer.create(<UserProfile/>).toJSON();
+  expect(tree).toMatchSnapshot();
+})
+
+it('render edit profile correctly', () => {
+  const tree = renderer.create(<ProfileEdit/>).toJSON();
+  expect(tree).toMatchSnapshot();
+})
+
+it('render startups correctly', () => {
+  const tree = renderer.create(<Startups/>).toJSON();
+  expect(tree).toMatchSnapshot();
+})
+

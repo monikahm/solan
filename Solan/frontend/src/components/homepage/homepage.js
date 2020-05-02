@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './homepage.css'
-import './instafeed/instafeed.css'
-import Instafeed from './instafeed/instafeed'
+//import './instafeed/instafeed.css'
+//import Instafeed from './instafeed/instafeed'
 import picture from '../../assets/images/bigsolanlogo.PNG'
 import picture2 from '../../assets/images/solanpåpinne2.PNG'
 import { getAllPartners } from './assets'
@@ -21,8 +21,8 @@ function Homepage() {
         <img src={picture} alt="bigsolansolo" className="bigsolanlogo" />
       </div>
       <div className="partners-container">
-        {allPartners.map((item) => {
-          return <img src={item} />
+        {allPartners.map((item, i) => {
+          return <img src={item} alt={item} key={i} />
         })}
       </div>
 
@@ -74,7 +74,7 @@ function Homepage() {
         </div>
       </div>
 
-      {/* INSTAGRAM FEED */}
+      {/*
       <div className="D">
         <div class="insta-wrapper">
           <div class="insta">
@@ -89,9 +89,10 @@ function Homepage() {
         <br />
         <Instafeed />
         <br />
+      </div>*/}
+      <div>
+        <ContactForm />
       </div>
-
-      <ContactForm />
     </div>
   )
 }

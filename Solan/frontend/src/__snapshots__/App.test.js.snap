@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render contact form correctly 1`] = `
+<div
+  className="main-form"
+>
+  <div
+    className="content-div"
+  >
+    <div
+      className="contact-us-description"
+    >
+      <p
+        className="heading"
+      >
+         Ta kontakt 
+      </p>
+      <p>
+         Send ditt spørsmål, så skal vi prøve å svare innen 1-2 dager 
+      </p>
+    </div>
+    <div
+      className="contact-details"
+    >
+      <p
+        className="justify-content-center margin-top"
+      >
+         NAVN 
+      </p>
+      <input
+        className="text-fields"
+        onChange={[Function]}
+        placeholder="Navn"
+        type="text"
+        value=""
+      />
+      <p
+        className="justify-content-center margin-top"
+      >
+         EPOST 
+      </p>
+      <input
+        className="text-fields"
+        onChange={[Function]}
+        placeholder="ole@domene.com"
+        style={
+          Object {
+            "borderBottom": false,
+          }
+        }
+        type="text"
+        value=""
+      />
+      <p
+        className="justify-content-center margin-top"
+      >
+         MELDING 
+      </p>
+      <textarea
+        className="text-fields"
+        onChange={[Function]}
+        placeholder="Din spørsmål"
+        value=""
+      />
+      <button
+        className="submit-button"
+        onClick={[Function]}
+      >
+        SEND MELDING
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`render edit profile correctly 1`] = `
+<div
+  className="edit-profile"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      name="email"
+      onChange={[Function]}
+      placeholder="E-post"
+      type="email"
+      value=""
+    />
+    <input
+      name="firstName"
+      onChange={[Function]}
+      placeholder="Fornavn"
+      type="text"
+      value=""
+    />
+    <input
+      name="lastname"
+      onChange={[Function]}
+      placeholder="Etternavn"
+      type="text"
+      value=""
+    />
+    <input
+      name="bio"
+      onChange={[Function]}
+      placeholder="Bio"
+      size="63"
+      type="text"
+      value=""
+    />
+    <input
+      onClick={[Function]}
+      type="submit"
+    />
+  </form>
+</div>
+`;
+
+exports[`render startups correctly 1`] = `
+<div
+  className="startups-grid-container"
+>
+  <div
+    className="startups_boxspacer"
+  />
+  <div
+    className="startups_A"
+  >
+    <p
+      className="startups_banner_image_text"
+    >
+      Startups
+    </p>
+  </div>
+</div>
+`;
+
+exports[`render user profile correctly 1`] = `
+<div
+  className="profile-grid-container"
+>
+  <div
+    className="profile_boxspacer"
+  >
+    <div
+      className="profile-image"
+    >
+      <img
+        alt="Profile Pic"
+        style={
+          Object {
+            "width": "10%",
+          }
+        }
+      />
+    </div>
+    <div
+      className="profile-name"
+    >
+      Navn: 
+       
+    </div>
+    <div
+      className="profile-email"
+    >
+      Epost: 
+    </div>
+    <div
+      className="profile-bio"
+    >
+      Bio: 
+    </div>
+    <div>
+      <a
+        href="/profile/edit"
+        onClick={[Function]}
+      >
+        Rediger profil
+      </a>
+    </div>
+  </div>
+</div>
+`;
