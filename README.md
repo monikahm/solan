@@ -23,8 +23,8 @@ If you're on Windows insted of source run:
 
 Then you can navigate to backend folder and run:  
 ```
-pip3 install requirements.txt
-python3 manage.py makemigations   
+pip3 install -r requirements.txt
+python3 manage.py makemigrations   
 python3 manage.py migrate
 python3 manage.py runserver
 ```

@@ -1,48 +1,43 @@
 import React from 'react'
 import './App.css'
-import FetchStartups from './components/startups/startups'
-import BlogPosts from './components/blogposts/blogposts'
-import { Router, Link } from '@reach/router'
+import { Router } from '@reach/router'
+import Startups from './components/startups/startups'
 import Partners from './components/partners/partners'
-import CouncilList from './components/council/council'
-import AboutSolan from './components/about/about'
-import KontaktOss from './components/kontaktoss/kontakt-oss'
+import Council from './components/council/council'
+import Homepage from './components/homepage/homepage'
+import Events from './components/events/events'
+import Contact from './components/contact/contact'
 import Login from './components/login/login'
+import Register from './components/login/register'
+import UserProfile from './components/userProfile/user-profile'
+import TopNavigationBar from './components/topNavigationBar/topNavigationBar'
+import BottomPanel from './components/bottomContactAndFooter/bottomPanel'
+import ProfileEdit from './components/userProfile/user-profile-edit'
 
-let Home = () => <div></div>
+// let Home = () => <div></div>
 
 const App = () => {
   return (
-    <div className="App">
-      <nav className="Navbar">
-        <a href="#default" className="logo">
-          Solan Linjeforening
-        </a>
-
-        <div className="Nav_Links">
-          <Link to="/">Hjem</Link>
-          <Link to="about">Om oss</Link>
-          <Link to="startups">Startups</Link>
-          <Link to="blogs">Blogg</Link>
-          <Link to="council">Styret</Link>
-          <Link to="login">Login</Link>
-        </div>
-      </nav>
-
-      <nav className="Navbar_footer">
-        <Link to="partners">Partners</Link>
-        <Link to="kontakt">Kontakt oss</Link>
-      </nav>
+    <div className="App-grid">
+      <TopNavigationBar />
       <Router>
-        <Home path="/" />
-        <AboutSolan path="about">About</AboutSolan>
-        <FetchStartups path="startups">Startups</FetchStartups>
-        <BlogPosts path="blogs">Blog</BlogPosts>
-        <Partners path="partners">Partners</Partners>
-        <CouncilList path="council">Council</CouncilList>
-        <KontaktOss path="kontakt">Kontakt oss</KontaktOss>
-        <Login path="login">Login</Login>
+        <React.Fragment>
+          <Homepage path="/">Homepage</Homepage>
+          <Homepage path="homepage">Homepage</Homepage>
+          <Startups path="startups">Startups</Startups>
+          <Partners path="partners">Partners</Partners>
+          <Council path="council">Council</Council>
+          <Events path="events">Events</Events>
+          <Contact path="contact">Kontakt Oss</Contact>
+          <Login path="login">Login</Login>
+          <Register path="register">Register</Register>
+          <UserProfile path="profile">Profile</UserProfile>
+            <ProfileEdit path="profile/edit">Profile Edit</ProfileEdit>
+        </React.Fragment>
       </Router>
+      <footer>
+        <BottomPanel />
+      </footer>
     </div>
   )
 }

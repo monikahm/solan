@@ -1,4 +1,3 @@
-import os
 import json
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -49,7 +48,7 @@ def fetch_groups_information(access_token, show_all=False):
 def approve_member(user, groups):
     study_group = {}
     for group in groups:
-        if group.get("id") == 'fc:adhoc:bddd4200-fa1c-40a4-86e2-a08cd1089cb6':
+        if group.get("id") == 'fc:adhoc:bddd4200-fa1c-40a4-86e2-a08cd1089cb6' or group.get("id") == 'fc:fs:fs:prg:ntnu.no:MENTRE':
             study_group = group
     if study_group:
         user.member = True
@@ -58,9 +57,13 @@ def approve_member(user, groups):
     else:
         return False
 
-
 @login_required()
 def study(request):
+    if  request.user.is_member:
+        print("Du er allerede registrert som medlem.")
+        messages.info(request, "Du er allerede registrert som medlem.")
+        return redirect('http://127.0.0.1/homepage')
+
     client = client_setup(DATAPORTEN_CLIENT_ID, DATAPORTEN_CLIENT_SECRET)
 
     # Generate random values used to verify that it's the same user when in the callback.
@@ -97,7 +100,8 @@ def study_callback(request):
         messages.error(
             request, "Forespørselen mangler påkrevde felter, vennligst prøv igjen."
         )
-        return redirect('http://127.0.0.1:8000/admin')
+        print("Forespørselen mangler påkrevde felter, vennligst prøv igjen.")
+        return redirect('http://127.0.0.1/login')
     if (
             not request.session.get("dataporten_study_state", "")
             or request.session["dataporten_study_state"] != auth_resp["state"]
@@ -105,7 +109,8 @@ def study_callback(request):
         messages.error(
             request, "Verifisering av forespørselen feilet. Vennligst prøv igjen."
         )
-        return redirect('http://127.0.0.1:8000/admin')
+        print("Verifisering av forespørselen feilet. Vennligst prøv igjen.")
+        return redirect('http://127.0.0.1/login')
 
     args = {
         'code': auth_resp['code'],
@@ -137,9 +142,10 @@ def study_callback(request):
             "kontoen du er logget inn med hos Solan. Pass på at du er logget inn med din egen konto "
             "begge steder og prøv igjen."
         )
-        return redirect('http://127.0.0.1:8000/admin')
-    elif not request.user.ntnu_username:
-        pass
+        print("Brukernavnet for brukerkontoen brukt til verifisering i Dataporten stemmer ikke overens med "
+            "kontoen du er logget inn med hos Solan. Pass på at du er logget inn med din egen konto "
+            "begge steder og prøv igjen.")
+        return redirect('http://127.0.0.1/login')
 
     # Getting information about study of the user
     groups = fetch_groups_information(access_token)
@@ -155,20 +161,23 @@ def study_callback(request):
                 request,
                 "Du er ikke medlem av Solan linjeforening"
             )
+            print("Du er ikke medlem av Solan linjeforening")
 
-            return redirect('http://127.0.0.1:8000/admin')
+            return redirect('http://127.0.0.1/homepage')
 
     except IntegrityError:
         messages.error(
             request,
             "En bruker er allerede knyttet til denne NTNU-kontoen"
         )
-        return redirect('http://127.0.0.1:8000/admin')
+        print("En bruker er allerede knyttet til denne NTNU-kontoen")
+        return redirect('http://127.0.0.1:8000/login')
 
     if is_approved:
         messages.success(
             request,
             "Du er nå et medlem av Solan linjeforening!"
         )
+        print("Du er nå et medlem av Solan linjeforenings nettside!")
 
-    return redirect('http://127.0.0.1:8000/admin')
+    return redirect('http://127.0.0.1/homepage')

@@ -1,0 +1,58 @@
+.contact-home-grid{
+    display: grid;
+    grid-template-areas:
+            'contact_boxspacer contact_boxspacer'
+            'contact_A contact_A'
+            'contact_B contact_B';
+}
+
+.contact_boxspacer{
+    grid-area: contact_boxspacer;
+    height: 90px;
+}
+
+.contact_A{
+    grid-area: contact_A;
+    display: flex;
+    width: 100%;
+    height: 35vw;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    background:
+            linear-gradient(
+                    rgba(58,62,112),
+                    rgba(55, 207, 171, 0)
+            ),
+            url(../../assets/images/bannerbilde3.PNG);
+    background-size: 100% 100%;    
+}
+
+.contact_banner_image_text{
+    color: #000;
+    opacity: 0.71;
+    font-size: 8vw;
+    font-weight: bold;
+}
+
+.contact_form{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: #ffcfab
+}
+
+@media(max-width: 980px) {
+    .contact_boxspacer {
+        height: 0px;
+    }
+    .contact_A {
+        height: 300px;
+    }
+}
+
+@media(max-width: 450px) {
+    .contact_A {
+        height: 200px;
+    }
+}

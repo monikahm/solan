@@ -1,0 +1,23 @@
+.profile-grid-container{
+    display: grid;
+    grid-template-areas:
+            'profile_boxspacer';
+    background-color: #FAF6F3;
+    margin-top: 100px;
+}
+
+
+.profile-name{
+    font-size: 30px;
+}
+.profile-email{
+    font-size: 30px;
+}
+
+.profile-bio{
+    font-size: 30px;
+}
+
+.edit-profile{
+    padding: 250px;
+}

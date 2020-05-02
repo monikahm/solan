@@ -11,6 +11,7 @@ from .views.blogpost import BlogPostView
 from .views.partner import PartnerView
 from .views.quote import QuoteView
 from .views.info import InfoView
+from .views.event import EventView
 from .views.dataporten import *
 from django.conf import settings
 from django.conf.urls.static import static
@@ -18,12 +19,13 @@ from django.conf.urls.static import static
 
 router = routers.DefaultRouter()
 router.register('api/startups', StartupView, 'startups')
-router.register('api/profile', ProfileView, 'profile')
+router.register('api/profiles', ProfileView, 'profile')
 router.register('api/councilposition', CouncilPositionView, 'council_position')
 router.register('api/blogposts', BlogPostView, 'blogposts')
 router.register('api/partners', PartnerView, 'partners')
 router.register('api/info', InfoView, 'info')
 router.register('api/quote', QuoteView, 'quote')
+router.register('api/event', EventView, 'event')
 
 
 urlpatterns = [
@@ -33,4 +35,4 @@ urlpatterns = [
     path('api/register', CreateUserView.as_view()),
     url(r'^study', study),
     url(r'^callback', study_callback),
-    ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

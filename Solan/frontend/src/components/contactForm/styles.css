@@ -1,0 +1,111 @@
+.main-form {
+    /* background-color: #f8f2ed; */
+    display: flex;
+    width: 100%;
+    min-height: 550px;
+    align-items: center;
+    justify-content: center;
+    /* padding: 30px; */
+    opacity: 0.9;
+}
+
+.main-form .content-div {
+    display: flex;
+    height: 100%;
+    width: 70%;
+}
+
+.content-div .contact-us-description {
+    display: flex;
+    flex-direction: column;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-family: sans-serif;
+    font-weight: 600;
+    text-align: center;
+    line-height: 24px;
+    height: 100%;
+    width: 200px;
+}
+
+.contact-us-description .heading {
+    font-size: 26px;
+}
+
+.main-form .contact-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    font-size: 13px;
+    font-weight: bold;
+    /* padding-top: 60px; */
+    padding-left: 50px;
+    width: calc(100% - 270px);
+}
+
+.contact-details .justify-content-center {
+    align-items: center;
+}
+
+.contact-details .margin-top {
+    margin-top: 30px;
+}
+
+.contact-details .text-fields{
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 20px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #acacac;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.contact-details .submit-button{
+    width: 200px;
+    height: 50px;
+    background-color: #ffcfab;
+    border: none;
+    font-size: 17px;
+    font-weight: bolder;
+    margin-top: 10px;
+    color: #f85f73;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.text-fields::placeholder {
+    color: rgb(245, 49, 49);
+}
+
+.text-fields:focus {
+    outline: none;
+    border-bottom: 1px solid #43adf3;
+}
+
+@media (max-width: 700px) {
+    .main-form .content-div {
+        flex-direction: column; 
+        width: 100%;
+        align-items: center;
+    }
+
+    .main-form .contact-details {
+        padding-left: 0px;
+        width: calc(100% - 50px);
+    }
+}
+
+@media (max-width: 500px) {
+    .main-form .contact-details {
+        width: calc(100% - 30px);
+    }
+
+    .contact-details .submit-button {
+        width: 140px;
+        height: 40px;
+        font-size: 15px;
+    }
+}

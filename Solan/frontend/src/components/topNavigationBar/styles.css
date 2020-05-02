@@ -1,0 +1,165 @@
+.Navbar {
+    grid-area: Navbar;
+    position: absolute;
+    background-color: #3A3E70;
+    overflow: hidden;
+    /* width: 100%; */
+    width: calc(100% - 80px);
+    padding-left: 40px;
+    padding-right: 40px;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Nav_Links{
+    padding-right: 20px;
+}
+
+.Nav_Links .login-button {
+    cursor: pointer;
+    height: 60px;
+    margin-left: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    border-radius: 30px;
+    background-color: #ffcfab;
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+    font-family: 'Gt walsheim pro', sans-serif;
+    color: #f85f73;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.logout-button{
+    border-radius: 30px;
+    height: 60px;
+    margin-left: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    flex: 0 0 auto;
+    font-family: 'Gt walsheim pro', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+    background-color: #ffcfab;
+    color: #f85f73;
+    border-width: 0;
+}
+
+.logout-button:hover{
+    background-color: white;
+}
+
+.login-button:hover {
+    background-color: white;
+}
+
+.Navbar a {
+    /* float: left; */
+    color: white;
+    text-align: center;
+    padding: 1.2vw 1.4vw;
+    margin-left: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 17px;
+    border-bottom: 1px solid #ffcfab;
+}
+
+.Navbar .logo {
+    margin-left: 20px;
+    height: 23px;
+    color: #ffcfab;
+    font-weight: bolder;
+    border-bottom: none;
+    font-size: 23px;
+    font-weight: 900;
+}
+
+.menu-icon-active {
+    justify-content: center;
+    height: 64px;
+    align-items: center;
+    /* margin-left: -15px; */
+    display: flex;
+    margin-top: -20px;
+    /* position: absolute; */
+    background-color: #C8C8C8;
+    width: 45px;
+    padding-left: 10px;
+    margin-right: 6px;
+}
+
+.menu-icon {
+    margin-right: 10px;
+}
+
+.Navbar .smaller-menu {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* padding-left: 30px; */
+    margin-top: 20px;
+    justify-content: space-between;
+    width: calc(100% - 30px);
+}
+
+@media(max-width: 980px) {
+    .Navbar {
+        height: 65px;
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .Navbar a {
+        height: 40px;
+        text-align: start;
+    }
+    
+    .Navbar .logo {
+        cursor: pointer;
+        height: 20px;
+        min-height: 20px;
+        margin-left: 40px;
+        margin-top: -10px;
+    }
+
+    .Nav_Links {
+        width: 100%;
+        display: flex;
+        padding-right: 0;
+        justify-content: center;
+        height: 300px;
+        flex-direction: column;
+        background-color: #C8C8C8;
+    }
+
+    .Nav_Links * {
+        cursor: pointer;
+    }
+
+    .Nav_Links *:hover {
+        color: #f85f73
+    }
+
+    .Nav_Links .login-button {
+        height: 55px;
+        margin-left: 0;
+        margin-left: 5px;
+        padding: 0;
+        border-radius: none;
+        background-color: #C8C8C8;;
+        padding: 1.2vw 1.4vw;
+        color: #ffcfab;
+    }
+}

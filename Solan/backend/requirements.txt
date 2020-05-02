@@ -2,5 +2,5 @@ Django>=3.0
 djangorestframework>=3.11.0
 Pillow>=7.0.0
 django-cors-headers>=3.2.1
-requests==2.18.4
+requests==2.20.0
 oic==0.14.0
