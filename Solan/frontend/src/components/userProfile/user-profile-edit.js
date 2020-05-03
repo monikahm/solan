@@ -23,6 +23,7 @@ export default function ProfileEdit() {
         lastName,
         bio
       )
+      window.open('/profile', '_ self')
     } catch (ex) {
       console.log(ex)
     }

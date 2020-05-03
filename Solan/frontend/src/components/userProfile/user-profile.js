@@ -6,8 +6,10 @@ import {Link} from "@reach/router";
 
 function UserProfile() {
   const [userdata, setUserdata] = useState({})
+  const [quoteOfTheDay, setQuoteOfTheDay] = useState({})
   const id = parseInt(localStorage.getItem('id'))
   useFetch('http://127.0.0.1:8000/api/profiles/' + id + '/', setUserdata)
+  useFetch('http://127.0.0.1:8000/api/quote/2/', setQuoteOfTheDay)
   const image = userdata.photo
   const profileImage = image !== null ? image : profilePlaceholder
   return (
@@ -30,6 +32,10 @@ function UserProfile() {
         </div>
         <div>
           <Link to="/profile/edit">Rediger profil</Link>
+        </div>
+        <div className="quote">
+          {'Quote of the day: '}
+          {quoteOfTheDay.quote} {'-'} {quoteOfTheDay.author}
         </div>
       </div>
     </div>
