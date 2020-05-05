@@ -58,3 +58,4 @@ Then run from the cli
 docker-compose build
 docker-compose up
 ```
+The whole project will then run on 127.0.0.1
