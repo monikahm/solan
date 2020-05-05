@@ -50,3 +50,11 @@ To start frontend
 ```
 npm start
 ``` 
+
+##Docker
+If you want to start whole project with Docker you will need to install Docker on your pc. 
+Then run from the cli
+```
+docker-compose build
+docker-compose up
+```
